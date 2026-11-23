@@ -2,5 +2,5 @@ node_modules/
 dist/
 .astro/
 # Fetched items live on the separate "data" branch, never on main.
-data/
+/data/
 .DS_Store
