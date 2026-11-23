@@ -1,0 +1,109 @@
+name: Update feeds
+
+on:
+  # Fallback schedule. GitHub may delay or skip it under load; cron-job.org (see README)
+  # calls workflow_dispatch for reliable timing. Odd minute on purpose: the top of the hour is the busiest.
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  # Rebuild when the feed lists or the site change (commits from the /admin editor land here).
+  push:
+    branches: [main]
+    paths:
+      - 'opml/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'public/**'
+      - 'tickertape.config.json'
+      - 'astro.config.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/update.yml'
+  # Rebuild the Saved page when a saved item (issue labelled "saved") changes. No feed fetch then.
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled, deleted]
+
+permissions:
+  contents: write # push the data branch
+  pages: write
+  id-token: write
+  actions: write # re-enable this workflow so the schedule never expires
+  issues: write # create the "saved" label once
+
+concurrency:
+  group: tickertape
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'saved')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Restore previous data (data branch)
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git clone --quiet --depth 1 --branch data "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+            rm -rf data/.git
+          else
+            echo "First run: no data branch yet."
+            mkdir -p data
+          fi
+
+      - name: Fetch feeds
+        if: github.event_name != 'issues'
+        run: npm run fetch
+
+      - name: Read saved items (issues labelled "saved")
+        run: npm run selection
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Store data (data branch, one commit overwritten on every run)
+        if: github.event_name != 'issues'
+        run: |
+          cd data
+          git init -q -b data
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Data $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Build the site
+        run: npm run build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          AUTH_WORKER_URL: ${{ vars.AUTH_WORKER_URL }}
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+      - id: deploy
+        uses: actions/deploy-pages@v5
+
+      - name: Housekeeping ("saved" label, keep the schedule alive)
+        if: github.event_name != 'issues'
+        continue-on-error: true
+        run: |
+          gh label create saved --repo "$GITHUB_REPOSITORY" --color EFE7D4 --description "Saved item (shown on the Saved page)" 2>/dev/null || true
+          # Public repos lose their schedule after 60 days without activity; re-enabling resets the counter.
+          gh workflow enable update.yml --repo "$GITHUB_REPOSITORY"

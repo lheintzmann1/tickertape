@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Tokenization of ETFs and stocks</title>
+    <dateCreated>Mon, 23 Nov 2026 10:15:20 GMT</dateCreated>
+    <ownerName>Nathan</ownerName>
+    <dateModified>Mon, 23 Nov 2026 12:00:00 GMT</dateModified>
+  </head>
+  <body>
+    <outline text="Tokenization of ETFs and stocks" title="Tokenization of ETFs and stocks">
+      <outline text="01 · Targeted alerts (Google News)" title="01 · Targeted alerts (Google News)">
+        <outline text="French" title="French">
+          <outline type="rss" text="[Google News FR] Tokenization (finance)" title="[Google News FR] Tokenization (finance)" xmlUrl="https://news.google.com/rss/search?q=tokenisation+actions+OR+ETF+OR+fonds+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=tokenisation+actions+OR+ETF+OR+fonds+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Tokenized stocks" title="[Google News FR] Tokenized stocks" xmlUrl="https://news.google.com/rss/search?q=%22actions+tokenis%C3%A9es%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22actions+tokenis%C3%A9es%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Tokenized ETFs / funds" title="[Google News FR] Tokenized ETFs / funds" xmlUrl="https://news.google.com/rss/search?q=%22ETF+tokenis%C3%A9%22+OR+%22fonds+tokenis%C3%A9%22+OR+%22parts+tokenis%C3%A9es%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22ETF+tokenis%C3%A9%22+OR+%22fonds+tokenis%C3%A9%22+OR+%22parts+tokenis%C3%A9es%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] DLT Pilot Regime / MiCA" title="[Google News FR] DLT Pilot Regime / MiCA" xmlUrl="https://news.google.com/rss/search?q=%22r%C3%A9gime+pilote+DLT%22+OR+MiCA+tokenisation+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22r%C3%A9gime+pilote+DLT%22+OR+MiCA+tokenisation+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Digital euro" title="[Google News FR] Digital euro" xmlUrl="https://news.google.com/rss/search?q=%22euro+num%C3%A9rique%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22euro+num%C3%A9rique%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+        </outline>
+        <outline text="English" title="English">
+          <outline type="rss" text="[Google News EN] Tokenized stocks" title="[Google News EN] Tokenized stocks" xmlUrl="https://news.google.com/rss/search?q=%22tokenized+stocks%22+OR+%22tokenized+equities%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22tokenized+stocks%22+OR+%22tokenized+equities%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Tokenized funds / ETFs" title="[Google News EN] Tokenized funds / ETFs" xmlUrl="https://news.google.com/rss/search?q=%22tokenized+fund%22+OR+%22tokenized+ETF%22+OR+%22tokenized+money+market%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22tokenized+fund%22+OR+%22tokenized+ETF%22+OR+%22tokenized+money+market%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Real-world assets (RWA)" title="[Google News EN] Real-world assets (RWA)" xmlUrl="https://news.google.com/rss/search?q=%22real-world+assets%22+tokenization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22real-world+assets%22+tokenization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] DTCC / Nasdaq tokenization" title="[Google News EN] DTCC / Nasdaq tokenization" xmlUrl="https://news.google.com/rss/search?q=DTCC+tokenization+OR+Nasdaq+tokenized+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=DTCC+tokenization+OR+Nasdaq+tokenized+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] ERC-3643 / security tokens" title="[Google News EN] ERC-3643 / security tokens" xmlUrl="https://news.google.com/rss/search?q=%22ERC-3643%22+OR+%22security+token%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22ERC-3643%22+OR+%22security+token%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] EU DLT Pilot Regime" title="[Google News EN] EU DLT Pilot Regime" xmlUrl="https://news.google.com/rss/search?q=%22DLT+Pilot+Regime%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22DLT+Pilot+Regime%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+        </outline>
+      </outline>
+      <outline text="02 · Digital assets media" title="02 · Digital assets media">
+        <outline text="Tokenization &amp; institutional finance" title="Tokenization &amp; institutional finance">
+          <outline type="rss" text="Ledger Insights — all" title="Ledger Insights — all" xmlUrl="https://www.ledgerinsights.com/feed/" htmlUrl="https://www.ledgerinsights.com/"/>
+          <outline type="rss" text="Ledger Insights — tokenization tag" title="Ledger Insights — tokenization tag" xmlUrl="https://www.ledgerinsights.com/tag/tokenization/feed/" htmlUrl="https://www.ledgerinsights.com/tag/tokenization/"/>
+          <outline type="rss" text="The Block" title="The Block" xmlUrl="https://www.theblock.co/rss.xml" htmlUrl="https://www.theblock.co/"/>
+          <outline type="rss" text="CoinDesk" title="CoinDesk" xmlUrl="https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml" htmlUrl="https://www.coindesk.com/"/>
+          <outline type="rss" text="Global Custodian (post-trade, custody)" title="Global Custodian (post-trade, custody)" xmlUrl="https://www.globalcustodian.com/feed" htmlUrl="https://www.globalcustodian.com/"/>
+          <outline type="rss" text="Global Trading" title="Global Trading" xmlUrl="https://www.globaltrading.net/feed/" htmlUrl="https://www.globaltrading.net/"/>
+        </outline>
+        <outline text="Cointelegraph (by topic)" title="Cointelegraph (by topic)">
+          <outline type="rss" text="Cointelegraph — Blockchain" title="Cointelegraph — Blockchain" xmlUrl="https://cointelegraph.com/rss/tag/blockchain" htmlUrl="https://cointelegraph.com/tags/blockchain"/>
+          <outline type="rss" text="Cointelegraph — Stablecoins" title="Cointelegraph — Stablecoins" xmlUrl="https://cointelegraph.com/rss/tag/stablecoin" htmlUrl="https://cointelegraph.com/tags/stablecoin"/>
+          <outline type="rss" text="Cointelegraph — Regulation" title="Cointelegraph — Regulation" xmlUrl="https://cointelegraph.com/rss/tag/regulation" htmlUrl="https://cointelegraph.com/tags/regulation"/>
+          <outline type="rss" text="Cointelegraph — Business" title="Cointelegraph — Business" xmlUrl="https://cointelegraph.com/rss/tag/business" htmlUrl="https://cointelegraph.com/tags/business"/>
+        </outline>
+        <outline text="Others" title="Others">
+          <outline type="rss" text="Decrypt" title="Decrypt" xmlUrl="https://decrypt.co/feed" htmlUrl="https://decrypt.co/"/>
+          <outline type="rss" text="CryptoSlate — Regulation" title="CryptoSlate — Regulation" xmlUrl="https://cryptoslate.com/regulation/feed/" htmlUrl="https://cryptoslate.com/regulation/"/>
+          <outline type="rss" text="CryptoSlate — Macro" title="CryptoSlate — Macro" xmlUrl="https://cryptoslate.com/macro/feed/" htmlUrl="https://cryptoslate.com/macro/"/>
+        </outline>
+      </outline>
+      <outline text="03 · French media" title="03 · French media">
+        <outline type="rss" text="Cryptoast" title="Cryptoast" xmlUrl="https://cryptoast.fr/feed/" htmlUrl="https://cryptoast.fr/"/>
+        <outline type="rss" text="Journal du Coin" title="Journal du Coin" xmlUrl="https://journalducoin.com/feed/" htmlUrl="https://journalducoin.com/"/>
+        <outline type="rss" text="Cointribune" title="Cointribune" xmlUrl="https://www.cointribune.com/feed/" htmlUrl="https://www.cointribune.com/"/>
+        <outline type="rss" text="BeInCrypto France" title="BeInCrypto France" xmlUrl="https://fr.beincrypto.com/feed/" htmlUrl="https://fr.beincrypto.com/"/>
+        <outline type="rss" text="Les Echos — Finance &amp; Markets" title="Les Echos — Finance &amp; Markets" xmlUrl="https://services.lesechos.fr/rss/les-echos-finance-marches.xml" htmlUrl="https://www.lesechos.fr/finance-marches"/>
+      </outline>
+      <outline text="04 · Institutions &amp; regulators" title="04 · Institutions &amp; regulators">
+        <outline type="rss" text="ECB — Press releases &amp; speeches" title="ECB — Press releases &amp; speeches" xmlUrl="https://www.ecb.europa.eu/rss/press.html" htmlUrl="https://www.ecb.europa.eu/"/>
+        <outline type="rss" text="ECB — Blog" title="ECB — Blog" xmlUrl="https://www.ecb.europa.eu/rss/blog.html" htmlUrl="https://www.ecb.europa.eu/press/blog/"/>
+        <outline type="rss" text="ECB — Publications" title="ECB — Publications" xmlUrl="https://www.ecb.europa.eu/rss/pub.html" htmlUrl="https://www.ecb.europa.eu/pub/"/>
+        <outline type="rss" text="ESMA" title="ESMA" xmlUrl="https://www.esma.europa.eu/rss.xml" htmlUrl="https://www.esma.europa.eu/"/>
+        <outline type="rss" text="EBA" title="EBA" xmlUrl="https://www.eba.europa.eu/news-press/news/rss.xml" htmlUrl="https://www.eba.europa.eu/"/>
+        <outline type="rss" text="AMF — News" title="AMF — News" xmlUrl="https://www.amf-france.org/fr/flux-rss/display/30" htmlUrl="https://www.amf-france.org/"/>
+        <outline type="rss" text="AMF — Alerts &amp; warnings" title="AMF — Alerts &amp; warnings" xmlUrl="https://www.amf-france.org/fr/flux-rss/display/28" htmlUrl="https://www.amf-france.org/"/>
+        <outline type="rss" text="Financial Stability Board" title="Financial Stability Board" xmlUrl="https://www.fsb.org/feed" htmlUrl="https://www.fsb.org/"/>
+        <outline type="rss" text="Federal Reserve — press releases" title="Federal Reserve — press releases" xmlUrl="https://www.federalreserve.gov/feeds/press_all.xml" htmlUrl="https://www.federalreserve.gov/"/>
+      </outline>
+      <outline text="05 · Blockchain engineering" title="05 · Blockchain engineering">
+        <outline text="Ethereum &amp; standards" title="Ethereum &amp; standards">
+          <outline type="rss" text="Ethereum Foundation Blog" title="Ethereum Foundation Blog" xmlUrl="https://blog.ethereum.org/feed.xml" htmlUrl="https://blog.ethereum.org/"/>
+          <outline type="rss" text="Ethereum Foundation — Research &amp; Development" title="Ethereum Foundation — Research &amp; Development" xmlUrl="https://blog.ethereum.org/en/research-and-development/feed.xml" htmlUrl="https://blog.ethereum.org/"/>
+          <outline type="rss" text="Vitalik Buterin" title="Vitalik Buterin" xmlUrl="https://vitalik.eth.limo/feed.xml" htmlUrl="https://vitalik.eth.limo/"/>
+        </outline>
+        <outline text="Code to watch (GitHub)" title="Code to watch (GitHub)">
+          <outline type="rss" text="[GitHub releases] ERC-3643 — security token standard" title="[GitHub releases] ERC-3643 — security token standard" xmlUrl="https://github.com/ERC-3643/ERC-3643/releases.atom" htmlUrl="https://github.com/ERC-3643/ERC-3643/releases"/>
+          <outline type="rss" text="[GitHub releases] T-REX (Tokeny) — ERC-3643 implementation" title="[GitHub releases] T-REX (Tokeny) — ERC-3643 implementation" xmlUrl="https://github.com/TokenySolutions/T-REX/releases.atom" htmlUrl="https://github.com/TokenySolutions/T-REX/releases"/>
+          <outline type="rss" text="[GitHub releases] OpenZeppelin Contracts" title="[GitHub releases] OpenZeppelin Contracts" xmlUrl="https://github.com/OpenZeppelin/openzeppelin-contracts/releases.atom" htmlUrl="https://github.com/OpenZeppelin/openzeppelin-contracts/releases"/>
+        </outline>
+        <outline text="Communities" title="Communities">
+          <outline type="rss" text="[Hacker News] &quot;tokenization&quot;" title="[Hacker News] &quot;tokenization&quot;" xmlUrl="https://hnrss.org/newest?q=tokenization" htmlUrl="https://hn.algolia.com/?q=tokenization"/>
+          <outline type="rss" text="[Hacker News] &quot;tokenized&quot;" title="[Hacker News] &quot;tokenized&quot;" xmlUrl="https://hnrss.org/newest?q=tokenized" htmlUrl="https://hn.algolia.com/?q=tokenized"/>
+          <outline type="rss" text="[Reddit] r/ethdev" title="[Reddit] r/ethdev" xmlUrl="https://www.reddit.com/r/ethdev/.rss" htmlUrl="https://www.reddit.com/r/ethdev/"/>
+          <outline type="rss" text="[Reddit] r/ethereum" title="[Reddit] r/ethereum" xmlUrl="https://www.reddit.com/r/ethereum/.rss" htmlUrl="https://www.reddit.com/r/ethereum/"/>
+          <outline type="rss" text="[DEV] #solidity" title="[DEV] #solidity" xmlUrl="https://dev.to/feed/tag/solidity" htmlUrl="https://dev.to/t/solidity"/>
+          <outline type="rss" text="[DEV] #blockchain" title="[DEV] #blockchain" xmlUrl="https://dev.to/feed/tag/blockchain" htmlUrl="https://dev.to/t/blockchain"/>
+          <outline type="rss" text="[Stack Overflow] [solidity]" title="[Stack Overflow] [solidity]" xmlUrl="https://stackoverflow.com/feeds/tag?tagnames=solidity&amp;sort=newest" htmlUrl="https://stackoverflow.com/questions/tagged/solidity"/>
+        </outline>
+      </outline>
+      <outline text="06 · Fintech &amp; law" title="06 · Fintech &amp; law">
+        <outline type="rss" text="Finextra — Headlines" title="Finextra — Headlines" xmlUrl="https://www.finextra.com/rss/headlines.aspx" htmlUrl="https://www.finextra.com/"/>
+        <outline type="rss" text="Fintech Business Weekly" title="Fintech Business Weekly" xmlUrl="https://fintechbusinessweekly.substack.com/feed" htmlUrl="https://fintechbusinessweekly.substack.com/"/>
+        <outline type="rss" text="Net Interest (Marc Rubinstein)" title="Net Interest (Marc Rubinstein)" xmlUrl="https://www.netinterest.co/feed" htmlUrl="https://www.netinterest.co/"/>
+        <outline type="rss" text="Tech.eu — Fintech" title="Tech.eu — Fintech" xmlUrl="https://tech.eu/category/fintech/feed" htmlUrl="https://tech.eu/category/fintech/"/>
+        <outline type="rss" text="Osborne Clarke — Fintech (legal)" title="Osborne Clarke — Fintech (legal)" xmlUrl="https://www.osborneclarke-fintech.com/feed/" htmlUrl="https://www.osborneclarke-fintech.com/"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

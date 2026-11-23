@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>COBOL migration &amp; AI-driven modernization of banking IT</title>
+    <dateCreated>Mon, 23 Nov 2026 10:15:20 GMT</dateCreated>
+    <ownerName>Nathan</ownerName>
+    <dateModified>Mon, 23 Nov 2026 12:00:00 GMT</dateModified>
+  </head>
+  <body>
+    <outline text="COBOL migration &amp; AI-driven modernization of banking IT" title="COBOL migration &amp; AI-driven modernization of banking IT">
+      <outline text="01 · Targeted alerts (Google News)" title="01 · Targeted alerts (Google News)">
+        <outline text="French" title="French">
+          <outline type="rss" text="[Google News FR] COBOL" title="[Google News FR] COBOL" xmlUrl="https://news.google.com/rss/search?q=COBOL+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=COBOL+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Mainframe + banking" title="[Google News FR] Mainframe + banking" xmlUrl="https://news.google.com/rss/search?q=mainframe+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=mainframe+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] COBOL migration / modernization" title="[Google News FR] COBOL migration / modernization" xmlUrl="https://news.google.com/rss/search?q=%22migration+COBOL%22+OR+%22modernisation+COBOL%22+OR+%22modernisation+du+mainframe%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22migration+COBOL%22+OR+%22modernisation+COBOL%22+OR+%22modernisation+du+mainframe%22+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Banking legacy &amp; technical debt" title="[Google News FR] Banking legacy &amp; technical debt" xmlUrl="https://news.google.com/rss/search?q=%22syst%C3%A8me+legacy%22+OR+%22dette+technique%22+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22syst%C3%A8me+legacy%22+OR+%22dette+technique%22+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] COBOL + generative AI" title="[Google News FR] COBOL + generative AI" xmlUrl="https://news.google.com/rss/search?q=COBOL+intelligence+artificielle+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=COBOL+intelligence+artificielle+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+          <outline type="rss" text="[Google News FR] Core banking (IT overhaul)" title="[Google News FR] Core banking (IT overhaul)" xmlUrl="https://news.google.com/rss/search?q=%22core+banking%22+OR+%22refonte+du+syst%C3%A8me+d%27information%22+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=%22core+banking%22+OR+%22refonte+du+syst%C3%A8me+d%27information%22+banque+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+        </outline>
+        <outline text="English" title="English">
+          <outline type="rss" text="[Google News EN] COBOL" title="[Google News EN] COBOL" xmlUrl="https://news.google.com/rss/search?q=COBOL+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=COBOL+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Mainframe modernization" title="[Google News EN] Mainframe modernization" xmlUrl="https://news.google.com/rss/search?q=%22mainframe+modernization%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22mainframe+modernization%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] COBOL to Java" title="[Google News EN] COBOL to Java" xmlUrl="https://news.google.com/rss/search?q=%22COBOL+to+Java%22+OR+%22COBOL+migration%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22COBOL+to+Java%22+OR+%22COBOL+migration%22+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] AI + legacy code" title="[Google News EN] AI + legacy code" xmlUrl="https://news.google.com/rss/search?q=%22legacy+code%22+AI+modernization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22legacy+code%22+AI+modernization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] AWS Transform for mainframe" title="[Google News EN] AWS Transform for mainframe" xmlUrl="https://news.google.com/rss/search?q=%22AWS+Transform%22+mainframe+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22AWS+Transform%22+mainframe+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] IBM watsonx Code Assistant for Z" title="[Google News EN] IBM watsonx Code Assistant for Z" xmlUrl="https://news.google.com/rss/search?q=%22watsonx+Code+Assistant%22+OR+%22IBM+Bob%22+mainframe+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22watsonx+Code+Assistant%22+OR+%22IBM+Bob%22+mainframe+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Claude / Anthropic + COBOL" title="[Google News EN] Claude / Anthropic + COBOL" xmlUrl="https://news.google.com/rss/search?q=Anthropic+COBOL+OR+Claude+COBOL+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Anthropic+COBOL+OR+Claude+COBOL+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Core banking modernization" title="[Google News EN] Core banking modernization" xmlUrl="https://news.google.com/rss/search?q=%22core+banking%22+modernization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=%22core+banking%22+modernization+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+          <outline type="rss" text="[Google News EN] Banks + mainframe outages" title="[Google News EN] Banks + mainframe outages" xmlUrl="https://news.google.com/rss/search?q=bank+mainframe+outage+OR+%22IT+failure%22+bank+legacy+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=bank+mainframe+outage+OR+%22IT+failure%22+bank+legacy+when%3A7d&amp;hl=en-US&amp;gl=US&amp;ceid=US:en"/>
+        </outline>
+      </outline>
+      <outline text="02 · Mainframe &amp; COBOL specialists" title="02 · Mainframe &amp; COBOL specialists">
+        <outline type="rss" text="Planet Mainframe" title="Planet Mainframe" xmlUrl="https://planetmainframe.com/feed/" htmlUrl="https://planetmainframe.com/"/>
+        <outline type="rss" text="Open Mainframe Project (Linux Foundation) — all" title="Open Mainframe Project (Linux Foundation) — all" xmlUrl="https://openmainframeproject.org/feed/" htmlUrl="https://openmainframeproject.org/"/>
+        <outline type="rss" text="Open Mainframe Project — COBOL category" title="Open Mainframe Project — COBOL category" xmlUrl="https://openmainframeproject.org/category/cobol/feed/" htmlUrl="https://openmainframeproject.org/category/cobol/"/>
+        <outline type="rss" text="OpenLegacy Blog (mainframe integration / migration)" title="OpenLegacy Blog (mainframe integration / migration)" xmlUrl="https://www.openlegacy.com/blog/rss.xml" htmlUrl="https://www.openlegacy.com/blog"/>
+        <outline type="rss" text="OpenText (formerly Micro Focus) — COBOL tag" title="OpenText (formerly Micro Focus) — COBOL tag" xmlUrl="https://blogs.opentext.com/tag/cobol/feed/" htmlUrl="https://blogs.opentext.com/tag/cobol/"/>
+        <outline type="rss" text="Treehouse Software (mainframe data → cloud)" title="Treehouse Software (mainframe data → cloud)" xmlUrl="https://treehousesoftware.wordpress.com/feed/" htmlUrl="https://treehousesoftware.wordpress.com/"/>
+        <outline type="rss" text="LzLabs Blog (software mainframe on Linux/cloud)" title="LzLabs Blog (software mainframe on Linux/cloud)" xmlUrl="https://blog.lzlabs.com/rss.xml" htmlUrl="https://blog.lzlabs.com/"/>
+        <outline type="rss" text="The Db2 Portal (Craig Mullins)" title="The Db2 Portal (Craig Mullins)" xmlUrl="https://db2portal.blogspot.com/feeds/posts/default" htmlUrl="https://db2portal.blogspot.com/"/>
+      </outline>
+      <outline text="03 · AI migration tools (cloud &amp; vendors)" title="03 · AI migration tools (cloud &amp; vendors)">
+        <outline type="rss" text="AWS — Migration &amp; Modernization : Mainframe &amp; Legacy" title="AWS — Migration &amp; Modernization : Mainframe &amp; Legacy" xmlUrl="https://aws.amazon.com/blogs/migration-and-modernization/category/mainframe-and-legacy/feed/" htmlUrl="https://aws.amazon.com/blogs/migration-and-modernization/category/mainframe-and-legacy/"/>
+        <outline type="rss" text="AWS — Migration &amp; Modernization (all)" title="AWS — Migration &amp; Modernization (all)" xmlUrl="https://aws.amazon.com/blogs/migration-and-modernization/feed/" htmlUrl="https://aws.amazon.com/blogs/migration-and-modernization/"/>
+        <outline type="rss" text="AWS — Machine Learning / IA" title="AWS — Machine Learning / IA" xmlUrl="https://aws.amazon.com/blogs/machine-learning/feed/" htmlUrl="https://aws.amazon.com/blogs/machine-learning/"/>
+        <outline type="rss" text="Google Cloud Blog" title="Google Cloud Blog" xmlUrl="https://cloudblog.withgoogle.com/rss/" htmlUrl="https://cloud.google.com/blog"/>
+        <outline type="rss" text="Anthropic — News" title="Anthropic — News" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml" htmlUrl="https://www.anthropic.com/news"/>
+        <outline type="rss" text="Anthropic — Engineering" title="Anthropic — Engineering" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml" htmlUrl="https://www.anthropic.com/engineering"/>
+        <outline type="rss" text="OpenAI — Developer Blog" title="OpenAI — Developer Blog" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_openai_developer.xml" htmlUrl="https://developers.openai.com/blog"/>
+        <outline type="rss" text="Cursor Blog" title="Cursor Blog" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_cursor.xml" htmlUrl="https://cursor.com/blog"/>
+        <outline type="rss" text="Devin Blog (Cognition, formerly Windsurf)" title="Devin Blog (Cognition, formerly Windsurf)" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_windsurf_blog.xml" htmlUrl="https://cognition.ai/blog"/>
+      </outline>
+      <outline text="04 · Developer communities" title="04 · Developer communities">
+        <outline text="Hacker News" title="Hacker News">
+          <outline type="rss" text="[Hacker News] &quot;COBOL&quot;" title="[Hacker News] &quot;COBOL&quot;" xmlUrl="https://hnrss.org/newest?q=COBOL" htmlUrl="https://hn.algolia.com/?q=COBOL"/>
+          <outline type="rss" text="[Hacker News] &quot;mainframe&quot;" title="[Hacker News] &quot;mainframe&quot;" xmlUrl="https://hnrss.org/newest?q=mainframe" htmlUrl="https://hn.algolia.com/?q=mainframe"/>
+          <outline type="rss" text="[Hacker News] &quot;legacy modernization&quot;" title="[Hacker News] &quot;legacy modernization&quot;" xmlUrl="https://hnrss.org/newest?q=legacy+modernization" htmlUrl="https://hn.algolia.com/?q=legacy+modernization"/>
+          <outline type="rss" text="[Hacker News] &quot;code migration LLM&quot;" title="[Hacker News] &quot;code migration LLM&quot;" xmlUrl="https://hnrss.org/newest?q=code+migration+LLM" htmlUrl="https://hn.algolia.com/?q=code+migration+LLM"/>
+        </outline>
+        <outline text="Reddit" title="Reddit">
+          <outline type="rss" text="[Reddit] r/cobol" title="[Reddit] r/cobol" xmlUrl="https://www.reddit.com/r/cobol/.rss" htmlUrl="https://www.reddit.com/r/cobol/"/>
+          <outline type="rss" text="[Reddit] r/mainframe" title="[Reddit] r/mainframe" xmlUrl="https://www.reddit.com/r/mainframe/.rss" htmlUrl="https://www.reddit.com/r/mainframe/"/>
+          <outline type="rss" text="[Reddit] r/ExperiencedDevs" title="[Reddit] r/ExperiencedDevs" xmlUrl="https://www.reddit.com/r/ExperiencedDevs/.rss" htmlUrl="https://www.reddit.com/r/ExperiencedDevs/"/>
+        </outline>
+        <outline text="DEV / Medium / Stack Overflow" title="DEV / Medium / Stack Overflow">
+          <outline type="rss" text="[DEV] #cobol" title="[DEV] #cobol" xmlUrl="https://dev.to/feed/tag/cobol" htmlUrl="https://dev.to/t/cobol"/>
+          <outline type="rss" text="[DEV] #mainframe" title="[DEV] #mainframe" xmlUrl="https://dev.to/feed/tag/mainframe" htmlUrl="https://dev.to/t/mainframe"/>
+          <outline type="rss" text="[DEV] #legacy" title="[DEV] #legacy" xmlUrl="https://dev.to/feed/tag/legacy" htmlUrl="https://dev.to/t/legacy"/>
+          <outline type="rss" text="[Medium] #cobol" title="[Medium] #cobol" xmlUrl="https://medium.com/feed/tag/cobol" htmlUrl="https://medium.com/tag/cobol"/>
+          <outline type="rss" text="[Medium] #mainframe" title="[Medium] #mainframe" xmlUrl="https://medium.com/feed/tag/mainframe" htmlUrl="https://medium.com/tag/mainframe"/>
+          <outline type="rss" text="[Medium] #mainframe-modernization" title="[Medium] #mainframe-modernization" xmlUrl="https://medium.com/feed/tag/mainframe-modernization" htmlUrl="https://medium.com/tag/mainframe-modernization"/>
+          <outline type="rss" text="[Medium] #legacy-modernization" title="[Medium] #legacy-modernization" xmlUrl="https://medium.com/feed/tag/legacy-modernization" htmlUrl="https://medium.com/tag/legacy-modernization"/>
+          <outline type="rss" text="[Stack Overflow] [cobol]" title="[Stack Overflow] [cobol]" xmlUrl="https://stackoverflow.com/feeds/tag?tagnames=cobol&amp;sort=newest" htmlUrl="https://stackoverflow.com/questions/tagged/cobol"/>
+          <outline type="rss" text="[Stack Overflow] [jcl]" title="[Stack Overflow] [jcl]" xmlUrl="https://stackoverflow.com/feeds/tag?tagnames=jcl&amp;sort=newest" htmlUrl="https://stackoverflow.com/questions/tagged/jcl"/>
+        </outline>
+      </outline>
+      <outline text="05 · Research papers (solid sources to cite)" title="05 · Research papers (solid sources to cite)">
+        <outline type="rss" text="[arXiv] COBOL (all papers)" title="[arXiv] COBOL (all papers)" xmlUrl="https://export.arxiv.org/api/query?search_query=all:COBOL&amp;sortBy=submittedDate&amp;sortOrder=descending&amp;max_results=30" htmlUrl="https://arxiv.org/search/?query=all%3ACOBOL&amp;searchtype=all"/>
+        <outline type="rss" text="[arXiv] Legacy code + LLM" title="[arXiv] Legacy code + LLM" xmlUrl="https://export.arxiv.org/api/query?search_query=abs:%22legacy+code%22+AND+abs:LLM&amp;sortBy=submittedDate&amp;sortOrder=descending&amp;max_results=30" htmlUrl="https://arxiv.org/search/?query=abs%3A%22legacy+code%22+AND+abs%3ALLM&amp;searchtype=all"/>
+        <outline type="rss" text="[arXiv] Code translation + LLM" title="[arXiv] Code translation + LLM" xmlUrl="https://export.arxiv.org/api/query?search_query=abs:%22code+translation%22+AND+abs:%22large+language+model%22&amp;sortBy=submittedDate&amp;sortOrder=descending&amp;max_results=30" htmlUrl="https://arxiv.org/search/?query=abs%3A%22code+translation%22+AND+abs%3A%22large+language+model%22&amp;searchtype=all"/>
+        <outline type="rss" text="arXiv cs.SE — software engineering (high volume)" title="arXiv cs.SE — software engineering (high volume)" xmlUrl="https://rss.arxiv.org/rss/cs.SE" htmlUrl="https://arxiv.org/list/cs.SE/recent"/>
+      </outline>
+      <outline text="06 · Banking IT, fintech &amp; regulation" title="06 · Banking IT, fintech &amp; regulation">
+        <outline text="French IT press" title="French IT press">
+          <outline type="rss" text="LeMagIT" title="LeMagIT" xmlUrl="https://www.lemagit.fr/rss/ContentSyndication.xml" htmlUrl="https://www.lemagit.fr/"/>
+          <outline type="rss" text="Le Monde Informatique — All news" title="Le Monde Informatique — All news" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/rss.xml" htmlUrl="https://www.lemondeinformatique.fr/"/>
+          <outline type="rss" text="Silicon.fr" title="Silicon.fr" xmlUrl="https://www.silicon.fr/feed" htmlUrl="https://www.silicon.fr/"/>
+          <outline type="rss" text="ZDNet France — Business &amp; IT solutions" title="ZDNet France — Business &amp; IT solutions" xmlUrl="https://www.zdnet.fr/feeds/rss/" htmlUrl="https://www.zdnet.fr/"/>
+          <outline type="rss" text="JDN" title="JDN" xmlUrl="https://www.journaldunet.com/rss/" htmlUrl="https://www.journaldunet.com/"/>
+          <outline type="rss" text="Les Echos — Tech &amp; Media" title="Les Echos — Tech &amp; Media" xmlUrl="https://services.lesechos.fr/rss/les-echos-tech-medias.xml" htmlUrl="https://www.lesechos.fr/tech-medias"/>
+          <outline type="rss" text="Les Echos — Finance &amp; Markets" title="Les Echos — Finance &amp; Markets" xmlUrl="https://services.lesechos.fr/rss/les-echos-finance-marches.xml" htmlUrl="https://www.lesechos.fr/finance-marches"/>
+        </outline>
+        <outline text="Banking &amp; fintech (international)" title="Banking &amp; fintech (international)">
+          <outline type="rss" text="Finextra — Headlines" title="Finextra — Headlines" xmlUrl="https://www.finextra.com/rss/headlines.aspx" htmlUrl="https://www.finextra.com/"/>
+          <outline type="rss" text="Bank Automation News" title="Bank Automation News" xmlUrl="https://bankautomationnews.com/feed/" htmlUrl="https://bankautomationnews.com/"/>
+          <outline type="rss" text="The Financial Brand — Fintech &amp; Banking" title="The Financial Brand — Fintech &amp; Banking" xmlUrl="https://thefinancialbrand.com/news/fintech-banking/feed/" htmlUrl="https://thefinancialbrand.com/"/>
+          <outline type="rss" text="Payments Dive" title="Payments Dive" xmlUrl="https://www.paymentsdive.com/feeds/news/" htmlUrl="https://www.paymentsdive.com/"/>
+          <outline type="rss" text="The Register" title="The Register" xmlUrl="https://www.theregister.com/headlines.atom" htmlUrl="https://www.theregister.com/"/>
+        </outline>
+        <outline text="Regulators (resilience, DORA)" title="Regulators (resilience, DORA)">
+          <outline type="rss" text="AMF — News" title="AMF — News" xmlUrl="https://www.amf-france.org/fr/flux-rss/display/30" htmlUrl="https://www.amf-france.org/fr/actualites-publications/actualites"/>
+          <outline type="rss" text="AMF — Publications (reports, studies)" title="AMF — Publications (reports, studies)" xmlUrl="https://www.amf-france.org/fr/flux-rss/display/25" htmlUrl="https://www.amf-france.org/fr/actualites-publications/publications"/>
+          <outline type="rss" text="ECB — Press releases &amp; speeches" title="ECB — Press releases &amp; speeches" xmlUrl="https://www.ecb.europa.eu/rss/press.html" htmlUrl="https://www.ecb.europa.eu/press/html/index.en.html"/>
+          <outline type="rss" text="EBA — European Banking Authority" title="EBA — European Banking Authority" xmlUrl="https://www.eba.europa.eu/news-press/news/rss.xml" htmlUrl="https://www.eba.europa.eu/"/>
+        </outline>
+      </outline>
+      <outline text="07 · Software engineering &amp; migration methods" title="07 · Software engineering &amp; migration methods">
+        <outline type="rss" text="Martin Fowler (Strangler Fig, refactoring)" title="Martin Fowler (Strangler Fig, refactoring)" xmlUrl="https://martinfowler.com/feed.atom" htmlUrl="https://martinfowler.com/"/>
+        <outline type="rss" text="InfoQ" title="InfoQ" xmlUrl="https://feed.infoq.com" htmlUrl="https://www.infoq.com/"/>
+        <outline type="rss" text="The Pragmatic Engineer" title="The Pragmatic Engineer" xmlUrl="https://newsletter.pragmaticengineer.com/feed" htmlUrl="https://newsletter.pragmaticengineer.com/"/>
+        <outline type="rss" text="Simon Willison (AI for code)" title="Simon Willison (AI for code)" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/"/>
+      </outline>
+      <outline text="08 · Open source projects to watch (GitHub)" title="08 · Open source projects to watch (GitHub)">
+        <outline type="rss" text="[GitHub releases] COBOL Check — COBOL unit tests" title="[GitHub releases] COBOL Check — COBOL unit tests" xmlUrl="https://github.com/openmainframeproject/cobol-check/releases.atom" htmlUrl="https://github.com/openmainframeproject/cobol-check/releases"/>
+        <outline type="rss" text="[GitHub releases] COBOL Programming Course (Open Mainframe)" title="[GitHub releases] COBOL Programming Course (Open Mainframe)" xmlUrl="https://github.com/openmainframeproject/cobol-programming-course/releases.atom" htmlUrl="https://github.com/openmainframeproject/cobol-programming-course/releases"/>
+        <outline type="rss" text="[GitHub commits] AWS CardDemo — demo COBOL banking app" title="[GitHub commits] AWS CardDemo — demo COBOL banking app" xmlUrl="https://github.com/aws-samples/aws-mainframe-modernization-carddemo/commits/main.atom" htmlUrl="https://github.com/aws-samples/aws-mainframe-modernization-carddemo"/>
+        <outline type="rss" text="[GitHub tags] GnuCOBOL (free compiler)" title="[GitHub tags] GnuCOBOL (free compiler)" xmlUrl="https://github.com/OCamlPro/gnucobol/tags.atom" htmlUrl="https://github.com/OCamlPro/gnucobol/tags"/>
+        <outline type="rss" text="[GitHub releases] Zowe CLI (mainframe DevOps)" title="[GitHub releases] Zowe CLI (mainframe DevOps)" xmlUrl="https://github.com/zowe/zowe-cli/releases.atom" htmlUrl="https://github.com/zowe/zowe-cli/releases"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

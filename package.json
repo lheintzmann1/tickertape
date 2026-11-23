@@ -1,0 +1,22 @@
+{
+  "name": "tickertape",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Static RSS reader: GitHub Actions fetches the feeds, GitHub Pages serves the site.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch-feeds.mjs",
+    "selection": "node scripts/fetch-selection.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.0",
+    "fast-xml-parser": "^5.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSite } from '../../lib/site-data.js';
+
+export function getStaticPaths() {
+  return loadSite().views.map((view) => ({ params: { view: view.slug }, props: { view } }));
+}
+const { view } = Astro.props;
+const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<Base title={view.label} current={view.slug}>
+  <div id="reader" data-src={`${B}data/${view.slug}.json`} data-slug={view.slug}>
+    <h1>{view.title}</h1>
+    <p id="updated"></p>
+    <form id="filters" onsubmit="return false">
+      <p>
+        <label>Search: <input type="search" id="q" size="30" autocomplete="off" /></label>{' '}
+        <label>
+          Period:{' '}
+          <select id="period">
+            <option value="1">24 hours</option>
+            <option value="3">3 days</option>
+            <option value="7">7 days</option>
+            <option value="30">30 days</option>
+            <option value="0">everything</option>
+          </select>
+        </label>{' '}
+        <label><input type="checkbox" id="unread" /> unread only</label>{' '}
+        <button type="button" id="mark-all">Mark all as read</button>
+      </p>
+    </form>
+    <details id="cats">
+      <summary>Categories and feeds</summary>
+      <div id="tree"></div>
+    </details>
+    <p id="scope" aria-live="polite"></p>
+    <div id="list"><p>Loading…</p></div>
+    <p id="more"></p>
+    <p>
+      <small>
+        Keyboard: j / k to move, o to open, m to mark read or unread, s to save, / to search.
+        Read state is kept in this browser:
+        <a href="#" id="export-read">export</a> |
+        <label><u>import</u><input type="file" id="import-read" accept="application/json" hidden /></label>.
+      </small>
+    </p>
+  </div>
+  <style is:inline>
+    .cur { outline: 2px solid Highlight; outline-offset: 4px; }
+  </style>
+  <script>
+    import { startReader } from '../../scripts/reader.js';
+    startReader(document.getElementById('reader'));
+  </script>
+</Base>

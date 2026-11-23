@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 176" role="img" aria-label="Tickertape">
+  <title>Tickertape: the holes spell TICKERTAPE in Baudot code</title>
+  <rect width="314" height="176" rx="10" fill="#1C1A17"/>
+  <path d="M0 24 H314 V108 H0 Z" fill="#EFE7D4"/>
+  <g fill="#1C1A17">
+    <circle cx="40" cy="96" r="6"/>
+    <circle cx="40" cy="73" r="3"/>
+    <circle cx="66" cy="50" r="6"/>
+    <circle cx="66" cy="62" r="6"/>
+    <circle cx="66" cy="73" r="3"/>
+    <circle cx="92" cy="50" r="6"/>
+    <circle cx="92" cy="62" r="6"/>
+    <circle cx="92" cy="84" r="6"/>
+    <circle cx="92" cy="73" r="3"/>
+    <circle cx="118" cy="38" r="6"/>
+    <circle cx="118" cy="50" r="6"/>
+    <circle cx="118" cy="62" r="6"/>
+    <circle cx="118" cy="84" r="6"/>
+    <circle cx="118" cy="73" r="3"/>
+    <circle cx="144" cy="38" r="6"/>
+    <circle cx="144" cy="73" r="3"/>
+    <circle cx="170" cy="50" r="6"/>
+    <circle cx="170" cy="84" r="6"/>
+    <circle cx="170" cy="73" r="3"/>
+    <circle cx="196" cy="96" r="6"/>
+    <circle cx="196" cy="73" r="3"/>
+    <circle cx="222" cy="38" r="6"/>
+    <circle cx="222" cy="50" r="6"/>
+    <circle cx="222" cy="73" r="3"/>
+    <circle cx="248" cy="50" r="6"/>
+    <circle cx="248" cy="62" r="6"/>
+    <circle cx="248" cy="96" r="6"/>
+    <circle cx="248" cy="73" r="3"/>
+    <circle cx="274" cy="38" r="6"/>
+    <circle cx="274" cy="73" r="3"/>
+  </g>
+  <text x="157" y="152" text-anchor="middle" fill="#EFE7D4" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="30" letter-spacing="6">tickertape</text>
+</svg>

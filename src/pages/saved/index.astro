@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSite } from '../../lib/site-data.js';
+
+const site = loadSite();
+const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: site.config.timeZone || 'UTC' });
+const viewBySlug = Object.fromEntries(site.views.map((v) => [v.slug, v]));
+const notes = [...site.selection]
+  .filter((f) => f.state === 'open')
+  .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
+  .map((f) => ({
+    ...f,
+    v: viewBySlug[f.view],
+    // The issue body starts with a quote block (title + source) that the heading already shows.
+    html: f.bodyHtml.replace(/^\s*<blockquote>[\s\S]*?<\/blockquote>\s*/, ''),
+  }));
+const groups = [...site.views.map((v) => [v, notes.filter((f) => f.view === v.slug)]), [null, notes.filter((f) => !f.v)]].filter(([, list]) => list.length);
+---
+
+<Base title="Saved" current="saved">
+  <h1>Saved</h1>
+  <p>
+    Items you kept, with your notes. Each one is a GitHub issue labelled <code>saved</code>: the “save” link under an item opens a pre-filled issue; add your notes and submit it. Closing the issue removes it from this page.
+  </p>
+  {
+    !notes.length && (
+      <p>
+        <i>
+          Nothing saved yet.
+          {site.repo ? ' Saved items show up here on the next build after the issue is created (usually within two minutes).' : ' Saving works once the site is built by GitHub Actions.'}
+        </i>
+      </p>
+    )
+  }
+  {
+    groups.length > 1 && (
+      <p>
+        Lists:{' '}
+        {groups.map(([v, list], i) => (
+          <>
+            {i > 0 && ' | '}
+            <a href={`#${v ? v.slug : 'other'}`}>{v ? v.label : 'Other'}</a> ({list.length})
+          </>
+        ))}
+      </p>
+    )
+  }
+  {
+    groups.map(([v, list]) => (
+      <>
+        <h2 id={v ? v.slug : 'other'}>{v ? v.label : 'Other'}</h2>
+        {list.map((f) => (
+          <>
+            <h3>{f.link ? <a href={f.link}>{f.title}</a> : f.title}</h3>
+            <p>
+              {f.source && <>Source: {f.source} | </>}
+              {f.published && <>Published {fmt.format(Date.parse(f.published))} | </>}
+              Saved {fmt.format(Date.parse(f.createdAt))} | <a href={f.issueUrl}>edit (#{f.number})</a>
+              {v && <> | <a href={`${B}${v.slug}/`}>list</a></>}
+            </p>
+            <blockquote set:html={f.html} />
+          </>
+        ))}
+      </>
+    ))
+  }
+</Base>

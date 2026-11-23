@@ -1,0 +1,33 @@
+{
+  "siteTitle": "Tickertape",
+  "lang": "en",
+  "timeZone": "Europe/Paris",
+  "retentionDays": 60,
+  "keepLatestPerFeed": 10,
+  "maxItemsPerFeed": 300,
+  "summaryLength": 320,
+  "concurrency": 10,
+  "timeoutMs": 20000,
+  "userAgent": "Tickertape/1.0 (+https://github.com/{repo})",
+  "auth": {
+    "workerUrl": ""
+  },
+  "hostIntervalsMs": {
+    "export.arxiv.org": 3500,
+    "www.reddit.com": 2500,
+    "news.google.com": 800,
+    "hnrss.org": 500,
+    "medium.com": 1500
+  },
+  "views": {
+    "cobol": {
+      "label": "COBOL"
+    },
+    "tokenization": {
+      "label": "Tokenization"
+    },
+    "general": {
+      "label": "General"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import { loadSite, viewItems } from '../lib/site-data.js';
+
+const site = loadSite();
+const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const DAY = 86_400_000;
+const tz = site.config.timeZone || 'UTC';
+const ref = site.state.updatedAt ? Date.parse(site.state.updatedAt) : Date.now();
+const fmt = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short', timeZone: tz });
+const fmtDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: tz });
+const lists = site.views.map((v) => {
+  const items = viewItems(v);
+  const ids = new Set(v.feeds.map((f) => f.id));
+  return {
+    v,
+    day: items.filter((it) => it.date > ref - DAY).length,
+    week: items.filter((it) => it.date > ref - 7 * DAY).length,
+    feeds: ids.size,
+    errors: [...ids].filter((id) => site.state.feeds?.[id]?.error).length,
+    latest: items.slice(0, 5).map((it) => ({ ...it, source: v.feeds.find((f) => f.id === it.feed)?.text || '' })),
+  };
+});
+---
+
+<Base current="home">
+  <h1>Overview</h1>
+  <p>
+    {site.state.updatedAt ? `Feeds fetched ${fmt.format(ref)}.` : 'Feeds have not been fetched yet: run the “Update feeds” workflow from the Actions tab of the repository.'}
+    {' '}Each list below is one OPML file.
+  </p>
+  {
+    lists.map((d) => (
+      <>
+        <h2>
+          <a href={`${B}${d.v.slug}/`}>{d.v.label}</a>
+        </h2>
+        <p>
+          {d.v.title}
+          <br />
+          Items: {d.day} in 24 hours | {d.week} in 7 days | Feeds: {d.feeds}
+          {d.errors > 0 && (
+            <>
+              {' '}(<a href={`${B}status/#${d.v.slug}`}>{d.errors} failing</a>)
+            </>
+          )}
+          {' '}| <a href={`${B}opml/${d.v.file}`}>OPML</a>
+        </p>
+        {d.latest.length ? (
+          <ul>
+            {d.latest.map((it) => (
+              <li>
+                <a href={it.link || `${B}${d.v.slug}/`}>{it.title}</a> ({it.source}, {fmtDay.format(it.date)})
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>
+            <i>No items yet.</i>
+          </p>
+        )}
+      </>
+    ))
+  }
+</Base>

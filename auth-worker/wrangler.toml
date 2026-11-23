@@ -1,0 +1,13 @@
+# Optional: deploy from the command line with `npx wrangler deploy` (run inside auth-worker/).
+# The README also explains how to paste worker.js in the Cloudflare dashboard instead.
+name = "tickertape-auth"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+# Comma-separated list of sites allowed to receive tokens.
+ALLOWED_ORIGINS = "https://YOUR-USERNAME.github.io"
+
+# Set these as secrets, not here:
+#   npx wrangler secret put GITHUB_CLIENT_ID
+#   npx wrangler secret put GITHUB_CLIENT_SECRET

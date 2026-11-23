@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>General — dev, AI, security, finance, entrepreneurship</title>
+    <dateCreated>Mon, 23 Nov 2026 10:15:20 GMT</dateCreated>
+    <ownerName>Nathan</ownerName>
+    <dateModified>Mon, 23 Nov 2026 12:00:00 GMT</dateModified>
+  </head>
+  <body>
+    <outline text="General — dev, AI, security, finance, entrepreneurship" title="General — dev, AI, security, finance, entrepreneurship">
+      <outline text="01 · Dev &amp; tech" title="01 · Dev &amp; tech">
+        <outline text="Aggregators (best of the day)" title="Aggregators (best of the day)">
+          <outline type="rss" text="Hacker News — Front page" title="Hacker News — Front page" xmlUrl="https://hnrss.org/frontpage" htmlUrl="https://news.ycombinator.com/"/>
+          <outline type="rss" text="Hacker News — Best (≥ 300 points)" title="Hacker News — Best (≥ 300 points)" xmlUrl="https://hnrss.org/newest?points=300" htmlUrl="https://news.ycombinator.com/best"/>
+          <outline type="rss" text="Lobsters" title="Lobsters" xmlUrl="https://lobste.rs/rss" htmlUrl="https://lobste.rs/"/>
+          <outline type="rss" text="Journal du hacker" title="Journal du hacker" xmlUrl="https://www.journalduhacker.net/rss" htmlUrl="https://www.journalduhacker.net/"/>
+          <outline type="rss" text="Techmeme" title="Techmeme" xmlUrl="https://www.techmeme.com/feed.xml" htmlUrl="https://www.techmeme.com/"/>
+        </outline>
+        <outline text="French" title="French">
+          <outline type="rss" text="Korben" title="Korben" xmlUrl="https://korben.info/feed" htmlUrl="https://korben.info/"/>
+          <outline type="rss" text="Next" title="Next" xmlUrl="https://next.ink/feed/free" htmlUrl="https://next.ink/"/>
+          <outline type="rss" text="Developpez.com" title="Developpez.com" xmlUrl="https://www.developpez.com/index/rss" htmlUrl="https://www.developpez.com/"/>
+          <outline type="rss" text="Numerama — Tech" title="Numerama — Tech" xmlUrl="https://www.numerama.com/tech/feed/" htmlUrl="https://www.numerama.com/tech/"/>
+          <outline type="rss" text="ZDNet France — News" title="ZDNet France — News" xmlUrl="https://www.zdnet.fr/feeds/rss/actualites/" htmlUrl="https://www.zdnet.fr/"/>
+          <outline type="rss" text="Le Monde Informatique — All news" title="Le Monde Informatique — All news" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/rss.xml" htmlUrl="https://www.lemondeinformatique.fr/"/>
+          <outline type="rss" text="Les Numériques — Computing" title="Les Numériques — Computing" xmlUrl="https://www.lesnumeriques.com/informatique/rss.xml" htmlUrl="https://www.lesnumeriques.com/"/>
+        </outline>
+        <outline text="International" title="International">
+          <outline type="rss" text="Ars Technica" title="Ars Technica" xmlUrl="https://feeds.arstechnica.com/arstechnica/index" htmlUrl="https://arstechnica.com/"/>
+          <outline type="rss" text="The Verge" title="The Verge" xmlUrl="https://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/"/>
+          <outline type="rss" text="TechCrunch" title="TechCrunch" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/"/>
+          <outline type="rss" text="MIT Technology Review" title="MIT Technology Review" xmlUrl="https://www.technologyreview.com/feed/" htmlUrl="https://www.technologyreview.com/"/>
+          <outline type="rss" text="The Register" title="The Register" xmlUrl="https://www.theregister.com/headlines.atom" htmlUrl="https://www.theregister.com/"/>
+        </outline>
+        <outline text="Engineering blogs" title="Engineering blogs">
+          <outline type="rss" text="The GitHub Blog" title="The GitHub Blog" xmlUrl="https://github.blog/feed/" htmlUrl="https://github.blog/"/>
+          <outline type="rss" text="Stack Overflow Blog" title="Stack Overflow Blog" xmlUrl="https://stackoverflow.blog/feed/" htmlUrl="https://stackoverflow.blog/"/>
+          <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="https://blog.cloudflare.com/rss/" htmlUrl="https://blog.cloudflare.com/"/>
+          <outline type="rss" text="Engineering at Meta" title="Engineering at Meta" xmlUrl="https://engineering.fb.com/feed/" htmlUrl="https://engineering.fb.com/"/>
+          <outline type="rss" text="Martin Fowler" title="Martin Fowler" xmlUrl="https://martinfowler.com/feed.atom" htmlUrl="https://martinfowler.com/"/>
+          <outline type="rss" text="The Pragmatic Engineer" title="The Pragmatic Engineer" xmlUrl="https://newsletter.pragmaticengineer.com/feed" htmlUrl="https://newsletter.pragmaticengineer.com/"/>
+          <outline type="rss" text="InfoQ" title="InfoQ" xmlUrl="https://feed.infoq.com" htmlUrl="https://www.infoq.com/"/>
+          <outline type="rss" text="JetBrains Blog" title="JetBrains Blog" xmlUrl="https://blog.jetbrains.com/feed" htmlUrl="https://blog.jetbrains.com/"/>
+        </outline>
+        <outline text="Web, languages &amp; frameworks" title="Web, languages &amp; frameworks">
+          <outline type="rss" text="MDN Blog" title="MDN Blog" xmlUrl="https://developer.mozilla.org/en-US/blog/rss.xml" htmlUrl="https://developer.mozilla.org/en-US/blog/"/>
+          <outline type="rss" text="Symfony Blog" title="Symfony Blog" xmlUrl="https://feeds.feedburner.com/symfony/blog" htmlUrl="https://symfony.com/blog/"/>
+          <outline type="rss" text="Laravel News" title="Laravel News" xmlUrl="https://feed.laravel-news.com/" htmlUrl="https://laravel-news.com/"/>
+          <outline type="rss" text="freeCodeCamp" title="freeCodeCamp" xmlUrl="https://www.freecodecamp.org/news/rss/" htmlUrl="https://www.freecodecamp.org/news/"/>
+          <outline type="rss" text="CSS-Tricks" title="CSS-Tricks" xmlUrl="https://css-tricks.com/feed/" htmlUrl="https://css-tricks.com/"/>
+          <outline type="rss" text="DEV Community (all)" title="DEV Community (all)" xmlUrl="https://dev.to/feed" htmlUrl="https://dev.to/"/>
+        </outline>
+      </outline>
+      <outline text="02 · Artificial intelligence" title="02 · Artificial intelligence">
+        <outline text="Labs &amp; vendors" title="Labs &amp; vendors">
+          <outline type="rss" text="Anthropic — News" title="Anthropic — News" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml" htmlUrl="https://www.anthropic.com/news"/>
+          <outline type="rss" text="Anthropic — Engineering" title="Anthropic — Engineering" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml" htmlUrl="https://www.anthropic.com/engineering"/>
+          <outline type="rss" text="Anthropic — Research" title="Anthropic — Research" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml" htmlUrl="https://www.anthropic.com/research"/>
+          <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_claude.xml" htmlUrl="https://claude.com/blog"/>
+          <outline type="rss" text="OpenAI — News" title="OpenAI — News" xmlUrl="https://openai.com/news/rss.xml" htmlUrl="https://openai.com/news/"/>
+          <outline type="rss" text="Google DeepMind" title="Google DeepMind" xmlUrl="https://deepmind.google/blog/rss.xml" htmlUrl="https://deepmind.google/discover/blog/"/>
+          <outline type="rss" text="Google Research" title="Google Research" xmlUrl="https://research.google/blog/rss/" htmlUrl="https://research.google/blog/"/>
+          <outline type="rss" text="Mistral AI" title="Mistral AI" xmlUrl="https://mistral.ai/news/rss" htmlUrl="https://mistral.ai/news"/>
+          <outline type="rss" text="Hugging Face Blog" title="Hugging Face Blog" xmlUrl="https://huggingface.co/blog/feed.xml" htmlUrl="https://huggingface.co/blog"/>
+          <outline type="rss" text="Ollama Blog (local AI)" title="Ollama Blog (local AI)" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_ollama.xml" htmlUrl="https://ollama.com/blog"/>
+        </outline>
+        <outline text="Analyse &amp; newsletters" title="Analyse &amp; newsletters">
+          <outline type="rss" text="Simon Willison" title="Simon Willison" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net/"/>
+          <outline type="rss" text="Latent Space" title="Latent Space" xmlUrl="https://www.latent.space/feed" htmlUrl="https://www.latent.space/"/>
+          <outline type="rss" text="The Batch (DeepLearning.AI)" title="The Batch (DeepLearning.AI)" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_the_batch.xml" htmlUrl="https://www.deeplearning.ai/the-batch/"/>
+          <outline type="rss" text="The Decoder" title="The Decoder" xmlUrl="https://the-decoder.com/feed/" htmlUrl="https://the-decoder.com/"/>
+          <outline type="rss" text="Ars Technica — AI" title="Ars Technica — AI" xmlUrl="https://arstechnica.com/ai/feed/" htmlUrl="https://arstechnica.com/ai/"/>
+        </outline>
+        <outline text="In French" title="In French">
+          <outline type="rss" text="Numerama — Artificial intelligence" title="Numerama — Artificial intelligence" xmlUrl="https://www.numerama.com/tech/intelligence-artificielle/feed/" htmlUrl="https://www.numerama.com/"/>
+          <outline type="rss" text="Journal du hacker — AI" title="Journal du hacker — AI" xmlUrl="https://www.journalduhacker.net/t/intelligence%20artificielle.rss" htmlUrl="https://www.journalduhacker.net/"/>
+        </outline>
+      </outline>
+      <outline text="03 · Security" title="03 · Security">
+        <outline type="rss" text="CERT-FR (ANSSI)" title="CERT-FR (ANSSI)" xmlUrl="https://www.cert.ssi.gouv.fr/feed/" htmlUrl="https://www.cert.ssi.gouv.fr/"/>
+        <outline type="rss" text="ZATAZ" title="ZATAZ" xmlUrl="https://www.zataz.com/feed/" htmlUrl="https://www.zataz.com/"/>
+        <outline type="rss" text="Le Monde Informatique — Security &amp; compliance" title="Le Monde Informatique — Security &amp; compliance" xmlUrl="https://www.lemondeinformatique.fr/flux-rss/thematique/securite/rss.xml" htmlUrl="https://www.lemondeinformatique.fr/"/>
+        <outline type="rss" text="Numerama — Cyberwar" title="Numerama — Cyberwar" xmlUrl="https://www.numerama.com/cyberguerre/feed/" htmlUrl="https://www.numerama.com/cyberguerre/"/>
+        <outline type="rss" text="BleepingComputer" title="BleepingComputer" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
+        <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com/"/>
+        <outline type="rss" text="Schneier on Security" title="Schneier on Security" xmlUrl="https://www.schneier.com/feed/atom/" htmlUrl="https://www.schneier.com/"/>
+      </outline>
+      <outline text="04 · Finance &amp; markets" title="04 · Finance &amp; markets">
+        <outline text="French" title="French">
+          <outline type="rss" text="Les Echos — Finance &amp; Markets" title="Les Echos — Finance &amp; Markets" xmlUrl="https://services.lesechos.fr/rss/les-echos-finance-marches.xml" htmlUrl="https://www.lesechos.fr/finance-marches"/>
+          <outline type="rss" text="Les Echos — Economy" title="Les Echos — Economy" xmlUrl="https://services.lesechos.fr/rss/les-echos-economie.xml" htmlUrl="https://www.lesechos.fr/economie-france"/>
+          <outline type="rss" text="Investir — Markets &amp; indices" title="Investir — Markets &amp; indices" xmlUrl="https://services.lesechos.fr/rss/investir-marches-indices.xml" htmlUrl="https://investir.lesechos.fr/"/>
+          <outline type="rss" text="Investir — Stock news" title="Investir — Stock news" xmlUrl="https://services.lesechos.fr/rss/investir-actualites-valeurs.xml" htmlUrl="https://investir.lesechos.fr/"/>
+          <outline type="rss" text="ABC Bourse — Market news" title="ABC Bourse — Market news" xmlUrl="https://www.abcbourse.com/rss/displaynewsrss" htmlUrl="https://www.abcbourse.com/"/>
+          <outline type="rss" text="ABC Bourse — Analysis" title="ABC Bourse — Analysis" xmlUrl="https://www.abcbourse.com/rss/lastanalysisrss" htmlUrl="https://www.abcbourse.com/"/>
+          <outline type="rss" text="Le Figaro — Economy" title="Le Figaro — Economy" xmlUrl="https://www.lefigaro.fr/rss/figaro_economie.xml" htmlUrl="https://www.lefigaro.fr/economie"/>
+          <outline type="rss" text="MoneyVox (banking, savings)" title="MoneyVox (banking, savings)" xmlUrl="https://www.moneyvox.fr/actu/rss.php" htmlUrl="https://www.moneyvox.fr/"/>
+          <outline type="rss" text="AMF — Retail investors" title="AMF — Retail investors" xmlUrl="https://www.amf-france.org/fr/flux-rss/display/22" htmlUrl="https://www.amf-france.org/fr/espace-epargnants"/>
+        </outline>
+        <outline text="International" title="International">
+          <outline type="rss" text="WSJ — Markets" title="WSJ — Markets" xmlUrl="https://feeds.content.dowjones.io/public/rss/RSSMarketsMain" htmlUrl="https://www.wsj.com/finance"/>
+          <outline type="rss" text="MarketWatch — Top stories" title="MarketWatch — Top stories" xmlUrl="https://feeds.content.dowjones.io/public/rss/mw_topstories" htmlUrl="https://www.marketwatch.com/"/>
+          <outline type="rss" text="CNBC — Top news" title="CNBC — Top news" xmlUrl="https://www.cnbc.com/id/100003114/device/rss/rss.html" htmlUrl="https://www.cnbc.com/"/>
+          <outline type="rss" text="Financial Times" title="Financial Times" xmlUrl="https://www.ft.com/rss/home/international" htmlUrl="https://www.ft.com/"/>
+          <outline type="rss" text="The Economist — Finance &amp; economics" title="The Economist — Finance &amp; economics" xmlUrl="https://www.economist.com/finance-and-economics/rss.xml" htmlUrl="https://www.economist.com/finance-and-economics"/>
+          <outline type="rss" text="Investing.com — News" title="Investing.com — News" xmlUrl="https://www.investing.com/rss/news.rss" htmlUrl="https://www.investing.com/"/>
+        </outline>
+        <outline text="Long-term investing &amp; ETFs" title="Long-term investing &amp; ETFs">
+          <outline type="rss" text="A Wealth of Common Sense (Ben Carlson)" title="A Wealth of Common Sense (Ben Carlson)" xmlUrl="https://awealthofcommonsense.com/feed/" htmlUrl="https://awealthofcommonsense.com/"/>
+          <outline type="rss" text="Of Dollars And Data (Nick Maggiulli)" title="Of Dollars And Data (Nick Maggiulli)" xmlUrl="https://ofdollarsanddata.com/feed/" htmlUrl="https://ofdollarsanddata.com/"/>
+          <outline type="rss" text="Oblivious Investor" title="Oblivious Investor" xmlUrl="https://obliviousinvestor.com/feed/" htmlUrl="https://obliviousinvestor.com/"/>
+          <outline type="rss" text="Money For the Rest of Us (podcast)" title="Money For the Rest of Us (podcast)" xmlUrl="https://rss.art19.com/money-for-the-rest-of-us" htmlUrl="https://moneyfortherestofus.com/"/>
+          <outline type="rss" text="[Reddit] r/vosfinances" title="[Reddit] r/vosfinances" xmlUrl="https://www.reddit.com/r/vosfinances/.rss" htmlUrl="https://www.reddit.com/r/vosfinances/"/>
+          <outline type="rss" text="[Reddit] r/eupersonalfinance" title="[Reddit] r/eupersonalfinance" xmlUrl="https://www.reddit.com/r/eupersonalfinance/.rss" htmlUrl="https://www.reddit.com/r/eupersonalfinance/"/>
+          <outline type="rss" text="[Reddit] r/Bogleheads" title="[Reddit] r/Bogleheads" xmlUrl="https://www.reddit.com/r/Bogleheads/.rss" htmlUrl="https://www.reddit.com/r/Bogleheads/"/>
+          <outline type="rss" text="[Reddit] r/ETFs" title="[Reddit] r/ETFs" xmlUrl="https://www.reddit.com/r/ETFs/.rss" htmlUrl="https://www.reddit.com/r/ETFs/"/>
+          <outline type="rss" text="[Google News FR] ETFs (French news)" title="[Google News FR] ETFs (French news)" xmlUrl="https://news.google.com/rss/search?q=ETF+bourse+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/search?q=ETF+bourse+when%3A7d&amp;hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+        </outline>
+        <outline text="Macro, central banks &amp; energy" title="Macro, central banks &amp; energy">
+          <outline type="rss" text="ECB — Press releases &amp; speeches" title="ECB — Press releases &amp; speeches" xmlUrl="https://www.ecb.europa.eu/rss/press.html" htmlUrl="https://www.ecb.europa.eu/"/>
+          <outline type="rss" text="ECB — Blog" title="ECB — Blog" xmlUrl="https://www.ecb.europa.eu/rss/blog.html" htmlUrl="https://www.ecb.europa.eu/press/blog/"/>
+          <outline type="rss" text="Federal Reserve — press releases" title="Federal Reserve — press releases" xmlUrl="https://www.federalreserve.gov/feeds/press_all.xml" htmlUrl="https://www.federalreserve.gov/"/>
+          <outline type="rss" text="BNP Paribas Economic Research — Eco Week" title="BNP Paribas Economic Research — Eco Week" xmlUrl="https://economic-research.bnpparibas.com/RSS/en-US/Eco-Week" htmlUrl="https://economic-research.bnpparibas.com/"/>
+          <outline type="rss" text="BNP Paribas Economic Research — Eco Flash" title="BNP Paribas Economic Research — Eco Flash" xmlUrl="https://economic-research.bnpparibas.com/RSS/en-US/Eco-Flash" htmlUrl="https://economic-research.bnpparibas.com/"/>
+          <outline type="rss" text="BNP Paribas Economic Research — Eco Perspectives" title="BNP Paribas Economic Research — Eco Perspectives" xmlUrl="https://economic-research.bnpparibas.com/RSS/en-US/Eco-Perspectives" htmlUrl="https://economic-research.bnpparibas.com/"/>
+          <outline type="rss" text="BNP Paribas Economic Research — Charts of the Week" title="BNP Paribas Economic Research — Charts of the Week" xmlUrl="https://economic-research.bnpparibas.com/RSS/en-US/Charts-of-the-Week" htmlUrl="https://economic-research.bnpparibas.com/"/>
+          <outline type="rss" text="BNP Paribas — Macro Waves podcast" title="BNP Paribas — Macro Waves podcast" xmlUrl="https://economic-research.bnpparibas.com/RSS/en-US/Podcast---Macro-Waves" htmlUrl="https://economic-research.bnpparibas.com/"/>
+          <outline type="rss" text="EIA — Today in Energy" title="EIA — Today in Energy" xmlUrl="https://www.eia.gov/rss/todayinenergy.xml" htmlUrl="https://www.eia.gov/todayinenergy/"/>
+          <outline type="rss" text="EIA — Press Releases" title="EIA — Press Releases" xmlUrl="https://www.eia.gov/rss/press_rss.xml" htmlUrl="https://www.eia.gov/pressroom/"/>
+        </outline>
+        <outline text="Crypto (overview)" title="Crypto (overview)">
+          <outline type="rss" text="Cointelegraph — Editor's picks" title="Cointelegraph — Editor's picks" xmlUrl="https://cointelegraph.com/editors_pick_rss" htmlUrl="https://cointelegraph.com/"/>
+          <outline type="rss" text="Cryptoast" title="Cryptoast" xmlUrl="https://cryptoast.fr/feed/" htmlUrl="https://cryptoast.fr/"/>
+        </outline>
+      </outline>
+      <outline text="05 · Entrepreneurship &amp; startups" title="05 · Entrepreneurship &amp; startups">
+        <outline type="rss" text="Maddyness" title="Maddyness" xmlUrl="https://www.maddyness.com/feed/" htmlUrl="https://www.maddyness.com/"/>
+        <outline type="rss" text="FrenchWeb" title="FrenchWeb" xmlUrl="https://www.frenchweb.fr/feed" htmlUrl="https://www.frenchweb.fr/"/>
+        <outline type="rss" text="Tech.eu" title="Tech.eu" xmlUrl="https://tech.eu/feed/" htmlUrl="https://tech.eu/"/>
+        <outline type="rss" text="Crunchbase News" title="Crunchbase News" xmlUrl="https://news.crunchbase.com/feed/" htmlUrl="https://news.crunchbase.com/"/>
+        <outline type="rss" text="Paul Graham — Essays" title="Paul Graham — Essays" xmlUrl="https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml" htmlUrl="https://paulgraham.com/articles.html"/>
+        <outline type="rss" text="Stratechery (Ben Thompson)" title="Stratechery (Ben Thompson)" xmlUrl="http://stratechery.com/feed/" htmlUrl="https://stratechery.com/"/>
+        <outline type="rss" text="Steve Blank" title="Steve Blank" xmlUrl="https://steveblank.com/feed/" htmlUrl="https://steveblank.com/"/>
+        <outline type="rss" text="Product Hunt" title="Product Hunt" xmlUrl="https://www.producthunt.com/feed" htmlUrl="https://www.producthunt.com/"/>
+      </outline>
+      <outline text="06 · General news" title="06 · General news">
+        <outline type="rss" text="Google News — Top stories (France)" title="Google News — Top stories (France)" xmlUrl="https://news.google.com/rss?hl=fr&amp;gl=FR&amp;ceid=FR:fr" htmlUrl="https://news.google.com/home?hl=fr&amp;gl=FR&amp;ceid=FR:fr"/>
+        <outline type="rss" text="Le Monde — Top stories" title="Le Monde — Top stories" xmlUrl="https://www.lemonde.fr/rss/une.xml" htmlUrl="https://www.lemonde.fr/"/>
+        <outline type="rss" text="Franceinfo — Headlines" title="Franceinfo — Headlines" xmlUrl="https://www.francetvinfo.fr/titres.rss" htmlUrl="https://www.francetvinfo.fr/"/>
+        <outline type="rss" text="Numerama — Science" title="Numerama — Science" xmlUrl="https://www.numerama.com/sciences/feed/" htmlUrl="https://www.numerama.com/sciences/"/>
+      </outline>
+    </outline>
+  </body>
+</opml>

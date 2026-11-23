@@ -1,0 +1,153 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSite } from '../../lib/site-data.js';
+
+const site = loadSite();
+const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const boot = {
+  base: B,
+  repo: site.repo,
+  branch: process.env.GITHUB_REF_NAME && !process.env.GITHUB_REF_NAME.includes('/') ? process.env.GITHUB_REF_NAME : 'main',
+  files: site.views.map((v) => v.file),
+  config: site.config,
+  authUrl: (process.env.AUTH_WORKER_URL || site.config.auth?.workerUrl || '').replace(/\/$/, ''),
+};
+---
+
+<Base title="Edit feeds" current="admin">
+  <h1>Edit feeds</h1>
+  <p id="conn-status">Offline mode: changes are downloaded as files.</p>
+  <p id="gh-login" hidden>
+    <button type="button" id="gh-connect"><b>Connect with GitHub</b></button>{' '}
+    <label><input type="checkbox" id="gh-remember" /> stay signed in on this device</label>
+  </p>
+  <details id="conn-details">
+    <summary id="pat-summary">Use a personal access token instead</summary>
+    <form id="conn-form">
+      <p>
+        <label>Repository: <input name="repo" size="28" placeholder="user/repo" required pattern="[\w.-]+/[\w.-]+" /></label>{' '}
+        <label>Branch: <input name="branch" size="10" required /></label>
+      </p>
+      <p>
+        <label>Token: <input name="token" type="password" size="40" autocomplete="off" placeholder="github_pat_…" required /></label>{' '}
+        <label><input type="checkbox" name="remember" /> remember on this device</label>{' '}
+        <button type="submit">Connect</button>
+      </p>
+    </form>
+    <p>
+      <small>
+        Create a <a href="https://github.com/settings/personal-access-tokens/new">fine-grained token</a> limited to this repository, with <b>Contents: Read and write</b>. The token stays in this browser and is only sent to
+        api.github.com. Unless you tick “remember”, it is forgotten when the tab closes.
+      </small>
+    </p>
+  </details>
+
+  <h2>Lists</h2>
+  <p id="file-list">Loading…</p>
+  <p>
+    <button type="button" id="new-file">New list</button>{' '}
+    <label>Import an OPML file as a new list: <input type="file" id="import-new" accept=".opml,.xml,text/xml" /></label>
+  </p>
+
+  <div id="editor"></div>
+
+  <div id="savebar" hidden>
+    <hr />
+    <p>
+      <b id="dirty-summary"></b>
+      <br />
+      <label>Commit message: <input id="commit-msg" size="50" /></label>{' '}
+      <button type="button" id="undo">Undo</button>{' '}
+      <button type="button" id="show-xml">View OPML</button>{' '}
+      <button type="button" id="download">Download</button>{' '}
+      <button type="button" id="save"><b>Save to GitHub</b></button>
+    </p>
+  </div>
+
+  <dialog id="dlg-feed">
+    <form method="dialog" id="feed-form">
+      <h2>Add feeds</h2>
+      <p>
+        <label><input type="radio" name="mode" value="url" checked /> one address</label>{' '}
+        <label><input type="radio" name="mode" value="tpl" /> from a template</label>{' '}
+        <label><input type="radio" name="mode" value="bulk" /> several addresses</label>
+      </p>
+      <fieldset data-panel="url">
+        <legend>Address</legend>
+        <p><label>Feed URL:<br /><input name="xmlUrl" type="url" size="50" placeholder="https://example.com/feed" /></label></p>
+        <p><label>Name:<br /><input name="text" size="50" placeholder="leave empty to use the site name" /></label></p>
+        <p><label>Website URL (optional):<br /><input name="htmlUrl" type="url" size="50" /></label></p>
+      </fieldset>
+      <fieldset data-panel="tpl" hidden>
+        <legend>Template</legend>
+        <p>
+          <label>
+            Type:{' '}
+            <select name="tpl">
+              <option value="gnews-en">Google News alert (English)</option>
+              <option value="gnews-fr">Google News alert (French)</option>
+              <option value="hn">Hacker News search</option>
+              <option value="reddit">Subreddit</option>
+              <option value="gh-releases">GitHub repository releases</option>
+              <option value="arxiv">arXiv search</option>
+              <option value="devto">DEV Community tag</option>
+              <option value="so">Stack Overflow tag</option>
+            </select>
+          </label>
+        </p>
+        <p><label><span id="tpl-label">Keywords</span>:<br /><input name="tplValue" size="50" /></label></p>
+        <p><small id="tpl-preview"></small></p>
+      </fieldset>
+      <fieldset data-panel="bulk" hidden>
+        <legend>Several addresses</legend>
+        <p>
+          <label>One URL per line, optionally preceded by a name and “|”:<br />
+            <textarea name="bulk" rows="7" cols="60" placeholder={'https://example.com/feed\nSome blog | https://blog.example.org/rss'}></textarea>
+          </label>
+        </p>
+      </fieldset>
+      <p><label>Category: <select name="folder"></select></label></p>
+      <p><small>Browsers can’t read other sites’ feeds, so feeds are checked on the next fetch (see “Feed status”).</small></p>
+      <p id="feed-error" role="alert"></p>
+      <p>
+        <button value="cancel" formnovalidate>Close</button>{' '}
+        <button value="ok" id="feed-ok">Add</button>
+      </p>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-newfile">
+    <form method="dialog" id="newfile-form">
+      <h2>New list</h2>
+      <p><label>Title:<br /><input name="title" size="50" required placeholder="What this list is about" /></label></p>
+      <p><label>File name:<br /><input name="name" size="30" required pattern="[a-z0-9][a-z0-9-]*" placeholder="my-topic" />.opml</label></p>
+      <p><small>Published at <code id="newfile-url">/my-topic/</code>. Lowercase letters, digits and dashes.</small></p>
+      <p>
+        <button value="cancel" formnovalidate>Cancel</button>{' '}
+        <button value="ok">Create list</button>
+      </p>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-xml">
+    <form method="dialog">
+      <h2 id="xml-title">OPML</h2>
+      <pre id="xml-pre" style="max-height:60vh;overflow:auto"></pre>
+      <p><button value="cancel">Close</button></p>
+    </form>
+  </dialog>
+
+  <style is:inline>
+    #savebar { position: sticky; bottom: 0; background: Canvas; padding-bottom: 0.25em; }
+    .row[draggable] { cursor: grab; }
+    .row.drop-before { border-top: 2px solid Highlight; }
+    .row.drop-after { border-bottom: 2px solid Highlight; }
+    .row.drop-inside { outline: 2px solid Highlight; }
+    #etree .dragging { opacity: 0.4; }
+  </style>
+  <script type="application/json" id="admin-boot" set:html={JSON.stringify(boot).replace(/</g, '\\u003c')} />
+  <script>
+    import { startAdmin } from '../../scripts/admin.js';
+    startAdmin(JSON.parse(document.getElementById('admin-boot').textContent));
+  </script>
+</Base>

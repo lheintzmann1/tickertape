@@ -1,0 +1,86 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSite } from '../../lib/site-data.js';
+
+const site = loadSite();
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: site.config.timeZone || 'UTC' });
+const run = site.state.lastRun;
+const groups = site.views.map((v) => {
+  const seen = new Set();
+  const rows = v.feeds
+    .filter((f) => !seen.has(f.id) && seen.add(f.id))
+    .map((f) => {
+      const s = site.state.feeds?.[f.id] || {};
+      return { f, s, status: s.error ? 'err' : s.lastSuccess ? 'ok' : 'new' };
+    })
+    .sort((a, b) => (a.status === 'err' ? 0 : 1) - (b.status === 'err' ? 0 : 1));
+  return { v, rows, errors: rows.filter((r) => r.status === 'err').length };
+});
+---
+
+<Base title="Feed status" current="status">
+  <h1>Feed status</h1>
+  <p>
+    {
+      run
+        ? `Last fetch ${fmt.format(Date.parse(site.state.updatedAt))}: ${run.ok} feeds read, ${run.failed} failing, ${run.added} new items, in ${Math.round(run.durationMs / 1000)} seconds.`
+        : 'No fetch yet.'
+    }
+  </p>
+  <p>
+    A failing feed keeps its existing items. Errors 403 and 429 usually mean the site blocks GitHub’s servers (Reddit, sometimes Medium): replace the feed or remove it in “Edit feeds”.
+  </p>
+  <p>
+    Jump to:{' '}
+    {groups.map((g, i) => (
+      <>
+        {i > 0 && ' | '}
+        <a href={`#${g.v.slug}`}>{g.v.label}</a>
+        {g.errors > 0 && ` (${g.errors} failing)`}
+      </>
+    ))}
+  </p>
+  {
+    groups.map((g) => (
+      <>
+        <h2 id={g.v.slug}>
+          {g.v.label}: {g.rows.length} feeds{g.errors ? `, ${g.errors} failing` : ''}
+        </h2>
+        <table border="1" cellpadding="4" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Feed</th>
+              <th>Category</th>
+              <th>Last success</th>
+              <th>Items</th>
+              <th>Problem</th>
+            </tr>
+          </thead>
+          <tbody>
+            {g.rows.map((r) => (
+              <tr>
+                <td>
+                  <a href={r.f.htmlUrl || r.s.siteUrl || r.f.xmlUrl}>{r.f.text}</a> <small>(<a href={r.f.xmlUrl}>feed</a>)</small>
+                </td>
+                <td>
+                  <small>{r.f.path.join(' › ')}</small>
+                </td>
+                <td>{r.s.lastSuccess ? fmt.format(Date.parse(r.s.lastSuccess)) : 'never'}</td>
+                <td align="right">{r.s.itemCount ?? 0}</td>
+                <td>
+                  {r.status === 'err' && (
+                    <b>
+                      {r.s.error}
+                      {r.s.consecutiveFailures > 1 && ` (${r.s.consecutiveFailures} times in a row)`}
+                    </b>
+                  )}
+                  {r.status === 'new' && <i>not fetched yet</i>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    ))
+  }
+</Base>
