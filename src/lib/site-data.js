@@ -66,6 +66,14 @@ export function loadSite() {
   return cache;
 }
 
+/** Section colours, like the folder tabs of an early-2000s portal: [0] is the Overview, then one per list. */
+export const PALETTE = ['#1f3a7a', '#0f6b74', '#a8481a', '#56701c', '#74306a', '#8a6a10'];
+export const TOOL_COLOR = '#5f5848';
+export function viewColor(view) {
+  const i = loadSite().views.findIndex((v) => v.slug === view?.slug);
+  return i < 0 ? TOOL_COLOR : PALETTE[(i + 1) % PALETTE.length];
+}
+
 /** Items of one view, newest first, deduplicated (a feed may sit in two categories). */
 export function viewItems(view) {
   const { itemsOf } = loadSite();

@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { loadSite, viewItems } from '../lib/site-data.js';
+import { loadSite, viewItems, viewColor } from '../lib/site-data.js';
 
 const site = loadSite();
 const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -9,57 +9,135 @@ const tz = site.config.timeZone || 'UTC';
 const ref = site.state.updatedAt ? Date.parse(site.state.updatedAt) : Date.now();
 const fmt = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeStyle: 'short', timeZone: tz });
 const fmtDay = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: tz });
+const pad = (n) => String(n).padStart(3, '0');
 const lists = site.views.map((v) => {
   const items = viewItems(v);
   const ids = new Set(v.feeds.map((f) => f.id));
   return {
     v,
+    color: viewColor(v),
     day: items.filter((it) => it.date > ref - DAY).length,
     week: items.filter((it) => it.date > ref - 7 * DAY).length,
     feeds: ids.size,
     errors: [...ids].filter((id) => site.state.feeds?.[id]?.error).length,
-    latest: items.slice(0, 5).map((it) => ({ ...it, source: v.feeds.find((f) => f.id === it.feed)?.text || '' })),
+    latest: items.slice(0, 6).map((it) => ({ ...it, source: v.feeds.find((f) => f.id === it.feed)?.text || '' })),
   };
 });
+const run = site.state.lastRun;
+const allIds = new Set(site.views.flatMap((v) => v.feeds.map((f) => f.id)));
+const failing = [...allIds].filter((id) => site.state.feeds?.[id]?.error).length;
+const savedCount = site.selection.filter((f) => f.state === 'open').length;
 ---
 
 <Base current="home">
-  <h1>Overview</h1>
-  <p>
-    {site.state.updatedAt ? `Feeds fetched ${fmt.format(ref)}.` : 'Feeds have not been fetched yet: run the “Update feeds” workflow from the Actions tab of the repository.'}
-    {' '}Each list below is one OPML file.
-  </p>
-  {
-    lists.map((d) => (
-      <>
-        <h2>
-          <a href={`${B}${d.v.slug}/`}>{d.v.label}</a>
-        </h2>
-        <p>
-          {d.v.title}
-          <br />
-          Items: {d.day} in 24 hours | {d.week} in 7 days | Feeds: {d.feeds}
-          {d.errors > 0 && (
+  <div class="cols">
+    <div>
+      <h1>Overview</h1>
+      <p>
+        {site.state.updatedAt ? <>Feeds fetched <b>{fmt.format(ref)}</b>.</> : 'Feeds have not been fetched yet: run the “Update feeds” workflow from the Actions tab of the repository.'}
+        {' '}Each list below is one OPML file.
+      </p>
+      {
+        lists.map((d) => (
+          <section class="box" style={`--box:${d.color}`}>
+            <h2 class="bar">
+              <a href={`${B}${d.v.slug}/`}>{d.v.label}</a>
+              <small><a href={`${B}${d.v.slug}/`}>open list &raquo;</a></small>
+            </h2>
+            <div class="box-body">
+              <p><i>{d.v.title}</i></p>
+              <div class="stats">
+                <span><span class="lcd">{pad(d.day)}</span> in 24 hours</span>
+                <span><span class="lcd">{pad(d.week)}</span> in 7 days</span>
+                <span><span class="lcd">{pad(d.feeds)}</span> feeds</span>
+              </div>
+              {d.latest.length ? (
+                <ul class="heads">
+                  {d.latest.map((it) => (
+                    <li>
+                      <a href={it.link || `${B}${d.v.slug}/`}>{it.title}</a> <span class="src">({it.source}, {fmtDay.format(it.date)})</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>
+                  <i>No items yet.</i>
+                </p>
+              )}
+            </div>
+            <div class="box-foot">
+              <span>
+                <a href={`${B}${d.v.slug}/`}>&raquo; More {d.v.label} headlines</a>
+                {d.errors > 0 && (
+                  <>
+                    {' '}&middot; <span class="light err" /><a href={`${B}status/#${d.v.slug}`}>{d.errors} failing</a>
+                  </>
+                )}
+              </span>
+              <a class="xml" href={`${B}opml/${d.v.file}`} title={`Download ${d.v.file}`}>OPML</a>
+            </div>
+          </section>
+        ))
+      }
+    </div>
+
+    <aside class="side">
+      <section class="box">
+        <h2 class="bar">Wire status</h2>
+        <div class="box-body">
+          {run ? (
             <>
-              {' '}(<a href={`${B}status/#${d.v.slug}`}>{d.errors} failing</a>)
+              <p>
+                <span class={`light ${failing ? 'err' : 'ok'}`} />
+                <b>{failing ? `${failing} feed${failing === 1 ? '' : 's'} failing` : 'All feeds OK'}</b>
+              </p>
+              <p>
+                Last run: <span class="lcd">{String(run.added).padStart(4, '0')}</span> new items from {run.ok} feeds in {Math.round(run.durationMs / 1000)} s.
+              </p>
             </>
+          ) : (
+            <p>No fetch yet.</p>
           )}
-          {' '}| <a href={`${B}opml/${d.v.file}`}>OPML</a>
-        </p>
-        {d.latest.length ? (
+          <p><a href={`${B}status/`}>&raquo; Feed status</a></p>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2 class="bar">Your corner</h2>
+        <div class="box-body">
           <ul>
-            {d.latest.map((it) => (
+            <li><a href={`${B}saved/`}>Saved items</a> ({savedCount})</li>
+            <li><a href={`${B}admin/`}>Edit feeds</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2 class="bar">Tip of the day</h2>
+        <div class="box-body">
+          <p>Inside a list, read without the mouse:</p>
+          <p>
+            <kbd>j</kbd> <kbd>k</kbd> move<br />
+            <kbd>o</kbd> open<br />
+            <kbd>m</kbd> mark read or unread<br />
+            <kbd>s</kbd> save<br />
+            <kbd>/</kbd> search
+          </p>
+        </div>
+      </section>
+
+      <section class="box">
+        <h2 class="bar">Get the lists</h2>
+        <div class="box-body">
+          <ul>
+            {site.views.map((v) => (
               <li>
-                <a href={it.link || `${B}${d.v.slug}/`}>{it.title}</a> ({it.source}, {fmtDay.format(it.date)})
+                <a class="xml" href={`${B}opml/${v.file}`}>OPML</a> {v.label}
               </li>
             ))}
           </ul>
-        ) : (
-          <p>
-            <i>No items yet.</i>
-          </p>
-        )}
-      </>
-    ))
-  }
+        </div>
+      </section>
+    </aside>
+  </div>
 </Base>

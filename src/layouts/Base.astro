@@ -1,5 +1,6 @@
 ---
-import { loadSite, viewItems } from '../lib/site-data.js';
+import '../styles/site.css';
+import { loadSite, viewItems, viewColor, PALETTE, TOOL_COLOR } from '../lib/site-data.js';
 
 interface Props {
   title?: string;
@@ -9,14 +10,35 @@ const { title, current = 'home' } = Astro.props;
 const site = loadSite();
 const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const DAY = 86_400_000;
+const tz = site.config.timeZone || 'UTC';
 const updated = site.state.updatedAt ? Date.parse(site.state.updatedAt) : null;
-const fresh = (v) => viewItems(v).filter((it) => updated && it.date > updated - DAY).length;
+
+const views = site.views.map((v) => ({ v, items: viewItems(v), color: viewColor(v) }));
+const fresh = (items) => items.filter((it) => updated && it.date > updated - DAY).length;
 const tools = [
   ['saved', 'Saved'],
   ['status', 'Feed status'],
   ['admin', 'Edit feeds'],
 ];
+const sec = current === 'home' ? PALETTE[0] : views.find((x) => x.v.slug === current)?.color || TOOL_COLOR;
+
+// Strip under the tabs: the "edition" of the wire.
+const fmtEdition = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: tz });
+const feedIds = new Set(site.views.flatMap((v) => v.feeds.map((f) => f.id)));
+const failing = [...feedIds].filter((id) => site.state.feeds?.[id]?.error).length;
+const totalItems = views.reduce((s, x) => s + x.items.length, 0);
+
+// Ticker: the latest headlines of every list.
+const seen = new Set();
+const wire = views
+  .flatMap((x) => x.items.slice(0, 12).map((it) => ({ it, x })))
+  .sort((a, b) => b.it.date - a.it.date)
+  .filter(({ it }) => !seen.has(it.link || it.id) && seen.add(it.link || it.id))
+  .slice(0, 18)
+  .map(({ it, x }) => ({ title: it.title, link: it.link || `${B}${x.v.slug}/`, label: x.v.label, color: x.color }));
+const wireSeconds = Math.max(40, wire.length * 7);
 const generated = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+const pad = (n, w = 6) => String(n).padStart(w, '0');
 ---
 
 <!doctype html>
@@ -25,50 +47,109 @@ const generated = new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UT
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="light" />
     <link rel="icon" href={`${B}favicon.svg`} type="image/svg+xml" />
     <title>{title ? `${title} - ${site.siteTitle}` : site.siteTitle}</title>
     {site.views.map((v) => <link rel="alternate" type="text/x-opml" title={v.label} href={`${B}opml/${v.file}`} />)}
-    <style is:inline>
-      :root { color-scheme: dark; }
-      body { max-width: 62em; margin: 1em auto; padding: 0 1em; line-height: 1.4; }
-      [hidden] { display: none !important; }
-      .read .t { color: GrayText; }
-      img.mark { vertical-align: -3px; }
-    </style>
   </head>
-  <body>
-    <p>
-      <img class="mark" src={`${B}favicon.svg`} width="18" height="18" alt="" />{' '}
-      {current === 'home' ? <b>Overview</b> : <a href={B}>Overview</a>}
+  <body style={`--sec:${sec}`}>
+    <a class="skip" href="#main">Skip to content</a>
+    <div id="page">
+      <header class="mast" id="top">
+        <a class="brand" href={B}>
+          <img src={`${B}favicon.svg`} width="44" height="44" alt="" />
+          <span class="word">{site.siteTitle.toLowerCase()}</span>
+        </a>
+        <span class="tagline">your feeds, punched fresh off the wire</span>
+        <p class="hello">
+          Hello, reader.{' '}
+          <small>Your read marks live in this browser only.</small>
+        </p>
+      </header>
+
+      <nav class="tabs" aria-label="Sections">
+        <div class="tabs-main">
+          <a href={B} class:list={['tab', { on: current === 'home' }]} style={`--tab:${PALETTE[0]}`} aria-current={current === 'home' ? 'page' : undefined}>Overview</a>
+          {
+            views.map((x) => (
+              <a
+                href={`${B}${x.v.slug}/`}
+                class:list={['tab', { on: current === x.v.slug }]}
+                style={`--tab:${x.color}`}
+                aria-current={current === x.v.slug ? 'page' : undefined}
+              >
+                {x.v.label}
+                {fresh(x.items) > 0 && <span class="cnt" title="items from the last 24 hours">{fresh(x.items)}</span>}
+              </a>
+            ))
+          }
+        </div>
+        <div class="tabs-tools">
+          {
+            tools.map(([key, label]) => (
+              <a href={`${B}${key}/`} class:list={['tab', 'tool', { on: current === key }]} style={`--tab:${TOOL_COLOR}`} aria-current={current === key ? 'page' : undefined}>
+                {label}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+      <div class="strip">
+        <span>
+          {updated ? <>Edition of <b>{fmtEdition.format(updated)}</b></> : <b>No edition yet: the feeds have not been fetched.</b>}
+        </span>
+        <span class="strip-stats">
+          {site.views.length} list{site.views.length === 1 ? '' : 's'} &middot; {feedIds.size} feeds
+          {failing > 0 && <> &middot; <a href={`${B}status/`}>{failing} failing</a></>}
+        </span>
+      </div>
+
       {
-        site.views.map((v) => (
-          <>
-            {' | '}
-            {current === v.slug ? <b>{v.label}</b> : <a href={`${B}${v.slug}/`}>{v.label}</a>}
-            {fresh(v) > 0 && <small title="items from the last 24 hours"> ({fresh(v)})</small>}
-          </>
-        ))
+        wire.length > 0 && (
+          <div class="ticker" aria-label="Latest headlines">
+            <span class="wire-label">WIRE</span>
+            <div class="wire-window">
+              <div class="wire-run" style={`--wire-time:${wireSeconds}s`}>
+                {[0, 1].map((copy) => (
+                  <ul aria-hidden={copy ? 'true' : undefined}>
+                    {wire.map((w) => (
+                      <li>
+                        <span class="wire-tag" style={`--tag:${w.color}`}>{w.label}</span>{' '}
+                        <a href={w.link} tabindex={copy ? '-1' : undefined}>{w.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                ))}
+              </div>
+            </div>
+          </div>
+        )
       }
-      {' || '}
-      {
-        tools.map(([key, label], i) => (
-          <>
-            {i > 0 && ' | '}
-            {current === key ? <b>{label}</b> : <a href={`${B}${key}/`}>{label}</a>}
-          </>
-        ))
-      }
-    </p>
-    <hr />
-    <slot />
-    <hr />
-    <p>
-      <small>
-        Tickertape, a static RSS reader built by GitHub Actions. Page generated {generated}.
-        {site.repo && <> Repository: <a href={`https://github.com/${site.repo}`}>{site.repo}</a>.</>}
-        {' '}OPML: {site.views.map((v, i) => <>{i > 0 && ', '}<a href={`${B}opml/${v.file}`}>{v.file}</a></>)}.
-      </small>
-    </p>
+
+      <main id="main">
+        <slot />
+      </main>
+
+      <footer class="foot">
+        <p class="top-link"><a href="#top">&#9650; Back to top</a></p>
+        <div class="badges" aria-hidden="true">
+          <span class="badge b-rss"><i>RSS</i><span>ATOM<br />INSIDE</span></span>
+          <span class="badge b-opml"><i>OPML</i><span>POWERED</span></span>
+          <span class="badge b-static"><i>100%</i><span>STATIC<br />HTML</span></span>
+          <span class="badge b-any"><i>ANY</i><span>BEST VIEWED<br />WITH ANY BROWSER</span></span>
+          <span class="badge b-track"><i>0</i><span>ADS &amp;<br />TRACKERS</span></span>
+        </div>
+        <p class="counter">
+          This edition carries <span class="lcd">{pad(totalItems)}</span> headlines.
+        </p>
+        <p>
+          <small>
+            {site.siteTitle}, a static RSS reader built by GitHub Actions. Page generated {generated}.
+            {site.repo && <> Repository: <a href={`https://github.com/${site.repo}`}>{site.repo}</a>.</>}
+            {' '}OPML: {site.views.map((v, i) => <>{i > 0 && ', '}<a href={`${B}opml/${v.file}`}>{v.file}</a></>)}.
+          </small>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

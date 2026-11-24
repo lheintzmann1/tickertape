@@ -133,20 +133,23 @@ export async function startReader(root) {
         nodes.map((n) => {
           if (n.id) {
             const f = data.feeds[n.id] || {};
-            return el('li', {}, link('s:' + n.id, n.n, unreadByFeed[n.id], f.err ? el('small', { title: f.err }, ' [failing]') : null));
+            return el('li', { class: 'feed' }, link('s:' + n.id, n.n, unreadByFeed[n.id], f.err ? el('small', { title: f.err }, ' [failing]') : null));
           }
           const path = [...p, n.n];
           const ids = [];
           (function collect(c) {
             for (const x of c) x.id ? ids.push(x.id) : collect(x.c);
           })(n.c);
-          return el('li', {}, link('c:' + path.join(SEP), n.n, count(ids)), build(n.c, path));
+          return el('li', { class: 'dir' }, link('c:' + path.join(SEP), n.n, count(ids)), build(n.c, path));
         }),
       );
     const top = build(data.tree, []);
-    top.prepend(el('li', {}, link('all', 'Whole list', count(Object.keys(data.feeds)))));
+    top.prepend(el('li', { class: 'all' }, link('all', 'Whole list', count(Object.keys(data.feeds)))));
     $('tree').replaceChildren(top, el('p', {}, el('small', {}, 'In brackets: unread items in the selected period.')));
   }
+
+  // Items published within one fetch cycle (3 hours) of the latest fetch get a "NEW!" stamp.
+  const fresh = data.updatedAt ? Date.parse(data.updatedAt) - 3 * 3_600_000 : 0;
 
   // ---- list ----
   let current = [];
@@ -260,7 +263,8 @@ export async function startReader(root) {
       toggle,
       data.repo && it.l ? [' | ', el('a', { href: selectionUrl(it), target: '_blank', rel: 'noopener', class: 'keep', title: 'Save with notes (opens a GitHub issue)' }, 'save')] : null,
     );
-    box.append(el('h3', {}, title), meta);
+    const isNew = !it.g && fresh && it.d > fresh;
+    box.append(el('h3', {}, isNew ? el('span', { class: 'new-badge', title: 'published in the 3 hours before the latest fetch' }, 'NEW!') : null, title), meta);
     if (it.s) box.append(el('p', {}, it.s));
     box._item = it;
     return box;

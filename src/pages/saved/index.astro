@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { loadSite } from '../../lib/site-data.js';
+import { loadSite, viewColor } from '../../lib/site-data.js';
 
 const site = loadSite();
 const B = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -48,21 +48,24 @@ const groups = [...site.views.map((v) => [v, notes.filter((f) => f.view === v.sl
   }
   {
     groups.map(([v, list]) => (
-      <>
-        <h2 id={v ? v.slug : 'other'}>{v ? v.label : 'Other'}</h2>
+      <section class="box" id={v ? v.slug : 'other'} style={`--box:${viewColor(v)}`}>
+        <h2 class="bar">
+          <span>{v ? v.label : 'Other'}</span>
+          <small>{list.length} saved</small>
+        </h2>
         {list.map((f) => (
-          <>
+          <article class="saved-item">
             <h3>{f.link ? <a href={f.link}>{f.title}</a> : f.title}</h3>
-            <p>
+            <p class="src">
               {f.source && <>Source: {f.source} | </>}
               {f.published && <>Published {fmt.format(Date.parse(f.published))} | </>}
               Saved {fmt.format(Date.parse(f.createdAt))} | <a href={f.issueUrl}>edit (#{f.number})</a>
               {v && <> | <a href={`${B}${v.slug}/`}>list</a></>}
             </p>
-            <blockquote set:html={f.html} />
-          </>
+            <blockquote class="note" set:html={f.html} />
+          </article>
         ))}
-      </>
+      </section>
     ))
   }
 </Base>

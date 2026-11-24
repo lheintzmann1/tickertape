@@ -137,14 +137,6 @@ const boot = {
     </form>
   </dialog>
 
-  <style is:inline>
-    #savebar { position: sticky; bottom: 0; background: Canvas; padding-bottom: 0.25em; }
-    .row[draggable] { cursor: grab; }
-    .row.drop-before { border-top: 2px solid Highlight; }
-    .row.drop-after { border-bottom: 2px solid Highlight; }
-    .row.drop-inside { outline: 2px solid Highlight; }
-    #etree .dragging { opacity: 0.4; }
-  </style>
   <script type="application/json" id="admin-boot" set:html={JSON.stringify(boot).replace(/</g, '\\u003c')} />
   <script>
     import { startAdmin } from '../../scripts/admin.js';
