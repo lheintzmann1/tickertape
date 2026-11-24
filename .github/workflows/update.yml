@@ -97,6 +97,11 @@ jobs:
         with:
           path: dist
 
+      # The artifact list is eventually consistent: deploy-pages sometimes looks for the artifact
+      # a fraction of a second after it was finalized and finds none ("No artifacts named github-pages").
+      - name: Wait for the artifact to be listed
+        run: sleep 20
+
       - id: deploy
         uses: actions/deploy-pages@v5
 
