@@ -101,6 +101,7 @@
           <outline type="rss" text="Financial Times" title="Financial Times" xmlUrl="https://www.ft.com/rss/home/international" htmlUrl="https://www.ft.com/"/>
           <outline type="rss" text="The Economist — Finance &amp; economics" title="The Economist — Finance &amp; economics" xmlUrl="https://www.economist.com/finance-and-economics/rss.xml" htmlUrl="https://www.economist.com/finance-and-economics"/>
           <outline type="rss" text="Investing.com — News" title="Investing.com — News" xmlUrl="https://www.investing.com/rss/news.rss" htmlUrl="https://www.investing.com/"/>
+          <outline type="rss" text="Walter Bloomberg (X)" title="Walter Bloomberg (X)" xmlUrl="https://nitter.perennialte.ch/DeItaone/rss" htmlUrl="https://x.com/DeItaone"/>
         </outline>
         <outline text="Long-term investing &amp; ETFs" title="Long-term investing &amp; ETFs">
           <outline type="rss" text="A Wealth of Common Sense (Ben Carlson)" title="A Wealth of Common Sense (Ben Carlson)" xmlUrl="https://awealthofcommonsense.com/feed/" htmlUrl="https://awealthofcommonsense.com/"/>
